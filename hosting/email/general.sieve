@@ -17,7 +17,7 @@ require ["fileinto", "include", "imapflags", "regex", "relational", "comparator-
 
 
 # Filter OEM supplier messages.
-if address :domain :is "From" ["ncix.com", "ncix.net", "pecanada.com"] {
+if address :domain :is "From" ["ncix.com", "ncix.net", "pecanada.com", "semicom.ca"] {
         fileinto "Suppliers";
 
 # Filter ISPs and hosting providers.
