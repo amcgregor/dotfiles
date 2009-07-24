@@ -1,0 +1,2 @@
+localmount-ephemeral
+A Gentoo linux boot-level initscript to reformat Amazon EC2 ephemeral storage as rieserfs and migrate a number of paths to it.
