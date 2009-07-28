@@ -1,2 +1,13 @@
 localmount-ephemeral
+
 A Gentoo linux boot-level initscript to reformat Amazon EC2 ephemeral storage as rieserfs and migrate a number of paths to it.
+
+
+mysql-init
+mysql-pwgen
+
+Helper scripts to configure and secure a MySQL database on EC2.
+
+Runs mysql_install_db if needed and randomizes the MySQL root password.  (Saving the new password to /root/mysql-root.pw for reference.)
+
+
