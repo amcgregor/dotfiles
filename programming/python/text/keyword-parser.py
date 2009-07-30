@@ -99,6 +99,8 @@ if __name__ == '__main__':
     
     search_parser.group = dict
     test_search(' foo  bar "baz"diz       ')
+    
+    search_parser.group = False 
     test_search('cat dog -leather')
     
     # Test unicode...
