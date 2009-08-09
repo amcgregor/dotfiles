@@ -128,7 +128,7 @@ class Cheshire(object):
 
 if __name__ == "__main__":
     base_alphabet = '''T&#LAt=~M$:c- hD]ZB|S+rfk7_}1J[,\0HW
-obj(3Y"m?C'2e{vFaK5GE/^z<Xs.Rix wdp>8PlV4!u*n;9Og)6UQyqN@I%'''
+obj(3Y"m?C'2e{vFaK5GE/^z<Xs.Rixwdp>8PlV4!u*n;9Og)6UQyqN@I%'''
     
     # Step 1: Decode command-line arguments.
     parser = OptionParser(usage="%prog [-Adev] [--help] [-a alphabet] [--] <keyphrase> [filename]", version="%prog 1.0")
