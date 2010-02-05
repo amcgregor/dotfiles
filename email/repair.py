@@ -35,7 +35,6 @@ from __future__ import with_statement
 import csv
 import codecs
 
-import vobject
 
 
 i = 0
