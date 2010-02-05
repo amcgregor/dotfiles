@@ -27,6 +27,7 @@ Enjoy!
 
 This code is public domain.  It requires Python 2.5 or newer.
 (This requirement is hardly a problem, as 2.6 is included in Mac.)
+Ensure you have a folder called 'chops' in the CWD.
 """
 
 from __future__ import with_statement
@@ -44,7 +45,7 @@ first = None
 with open("input.csv", 'r') as rf:
 	reader = csv.reader(rf, delimiter=',', quotechar='"')
 	
-	with open("fixed.csv", 'w') as wf:
+	with open("output.csv", 'w') as wf:
 		writer = csv.writer(wf, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 		part = open("chops/%i.csv" % (i // 20, ), 'w')
 		partwriter = csv.writer(part, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
