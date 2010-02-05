@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 """
-Parse an input CSV file, cleaning cells as you.
+Parse an input CSV file, cleaning cells as you go.
 
 Transcribes from 'input.csv' into 'output.csv' while simultaneously
 breaking the input into files containing no more than 20 records each.
@@ -25,7 +25,8 @@ Enjoy!
 
     - Alice.
 
-This code is public domain.
+This code is public domain.  It requires Python 2.5 or newer.
+(This requirement is hardly a problem, as 2.6 is included in Mac.)
 """
 
 from __future__ import with_statement
