@@ -1,0 +1,188 @@
+SH=$HOME/.oh-my-zsh
+ZSH_THEME="alice"
+
+plugins=(git mercurial svn python history-substring-search)
+
+source $ZSH/oh-my-zsh.sh
+
+
+# Check my home folder and up one folder.
+cdpath=(~ ..)
+
+# Get alterted when other users log in.
+watch=(notme)
+LOGCHECK=30
+WATCHFMT='%n %a %l from %m at %t.'
+
+HISTFILE=${HOME}/.zsh_history
+HISTSIZE=5000
+SAVEHIST=4500
+DIRSTACKSIZE=20
+REPORTTIME=2
+LISTPROMPT=''
+SPROMPT='zsh: correct '%R' to '%r' ? ([Y]es/[N]o/[E]dit/[A]bort) '
+
+export EDITOR="nano"
+export VISUAL="nano"
+
+export PATH=/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.4.5:$HOME/bin
+
+
+# Git aliases.
+
+alias add='git add'
+alias ci='git commit'
+alias commit='git commit'
+alias co='git checkout'
+alias clone='git clone'
+alias push='git push'
+alias pull='git pull'
+alias br='git branch'
+alias st='git status'
+alias mg='git merge'
+alias tag='git tag'
+alias stash='git stash'
+alias wtf='git wtf'
+alias switch='git switch'
+alias remote='git remote'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gd='git diff | mate'
+alias gl='git pull'
+alias gp='git push'
+alias gst='git status'
+
+alias p='ps -fu $USER'
+alias v='less'
+alias h='history'
+alias z='$EDITOR ~/.zshrc;src'
+alias d='du -h -d 1 .'
+alias duwd='du --total -h --max-depth=1 .'
+alias gvim='$EDITOR'
+alias g='$EDITOR'
+alias vi='$EDITOR'
+alias vim='$EDITOR'
+alias mv='nocorrect mv -i'
+alias cp='nocorrect cp -i'
+alias rm='nocorrect rm -i'
+alias mkdir='nocorrect mkdir'
+alias man='nocorrect man'
+alias find='noglob find'
+alias grep='grep --colour'
+alias l='ls'
+alias ll='ls -l'
+alias l.='ls -A'
+alias ll.='ls -al'
+alias lsa='ls -ls .*' ## list only file beginning with "."
+alias lsd='ls -ld *(-/DN)' ## list only dirs
+alias du1='du -hs *(/)' ## du with depth 1
+alias u='uptime'
+alias j='ps ax'
+alias ..='cd ..'
+alias cd/='cd /'
+alias sd='export DISPLAY=:0.0' ## export DISPLAY=:0.0
+
+alias -g L='|less'
+alias -g G='|grep'
+alias -g T='|tail'
+alias -g H='|head'
+alias -g W='|wc -l'
+alias -g S='|sort'
+alias -g US='|sort -u'
+alias -g NS='|sort -n'
+alias -g RNS='|sort -nr'
+alias -g N='&>/dev/null&'
+
+
+## find process to kill and kill it.
+pskill ()
+{ 
+    local pid
+    pid=$(ps -ax | grep $1 | grep -v grep | awk '{ print $1 }')
+    echo -n "killing $1 (process $pid)..."
+    kill -9 $=pid
+    echo "slaughtered."
+}
+
+## invoke this every time when u change .zshrc to
+## recompile it.
+src ()
+{
+    autoload -U zrecompile
+    [ -f ~/.zshrc ] && zrecompile -p ~/.zshrc
+    [ -f ~/.zcompdump ] && zrecompile -p ~/.zcompdump
+    [ -f ~/.zshrc.zwc.old ] && rm -f ~/.zshrc.zwc.old
+    [ -f ~/.zcompdump.zwc.old ] && rm -f ~/.zcompdump.zwc.old
+    source ~/.zshrc
+}
+
+## find all suid files
+suidfind ()
+{ ls -l /**/*(su0x) }
+
+## restore all .bak files
+restore_bak ()
+{
+autoload -U zmv
+zmv '(**/)(*).bak' '$1$2'
+}
+
+## display processes tree in less
+pst ()
+{ pstree -p $* | less -S }
+
+## search for various types or README file in dir and display them in $PAGER
+readme ()
+{
+    local files
+    files=(./(#i)*(read*me|lue*m(in|)ut)*(ND))
+    if (($#files))
+    then $PAGER $files
+    else
+    print 'No README files.'
+    fi
+}
+
+
+# Completion tweaks.
+
+hosts=( $(cat /etc/hosts | grep -v "^#" | awk '{print $1}'| cut -d"," -f1), $(cat $HOME/.ssh/known_hosts | awk '{print $1}'| cut -d"," -f1))
+zstyle ':completion:*' hosts $hosts
+
+
+setopt always_to_end
+setopt auto_cd
+setopt auto_pushd
+setopt NO_c_bases
+setopt cdable_vars
+setopt NO_complete_aliases
+setopt complete_in_word
+setopt extended_glob
+setopt glob_complete
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_no_functions
+setopt hist_no_store
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt hist_verify
+setopt NO_hup
+setopt inc_append_history
+setopt interactive_comments
+setopt list_packed
+setopt NO_list_rows_first
+setopt list_types
+setopt long_list_jobs
+setopt magic_equal_subst
+setopt null_glob
+setopt NO_numeric_glob_sort
+setopt NO_path_dirs
+setopt pushd_ignore_dups
+setopt pushd_minus
+setopt pushd_silent
+setopt rc_quotes
+setopt share_history
