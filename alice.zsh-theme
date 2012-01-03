@@ -1,4 +1,5 @@
 # An oh-my-zsh theme with support for git, subversion, mercurial, and virtualenv.
+# Looks like: http://cl.ly/1Y2q2j00190n3L373A37
 
 # Configurable parameters are here.
 
