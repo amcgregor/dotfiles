@@ -98,16 +98,13 @@ if address :domain :is "From" ["ncix.com", "ncix.net", "pecanada.com", "semicom.
         fileinto "Projects.TuneCore Council";
 
 
-# Annoying mailing lists.  TBD.
-# } elsif header :contains "From" [] {
-#        reject "I have tried to unsubscribe; I do not want your newsletter.  Please unsubscribe me."
+} elsif address "From" ["@klout.com"] {
+        reject "Get knackered."
 
 
 # I BCC my replies for better archiving, but I wrote it, so I don't need to read it.
-} elsif address "Return-Path" ["alice@gothcandy.com", "mbevan@topfloor.ca", "amcgregor@topfloor.ca"] {
+} elsif address "Return-Path" ["alice@gothcandy.com", "amcgregor@topfloor.ca"] {
         setflag "\\seen";
-
-# TODO: Soft-bounce (but still deliver) mail to old aliases like matt.bevan@topfloor.ca.
 
 # Vacation mail.
 # I don't want vacation messages going to mailing lists, etc. thus this is an elsif.
