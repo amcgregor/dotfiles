@@ -43,6 +43,7 @@ alias u='uptime'
 alias v='less'
 alias screens='screen -ls'
 alias wipe='screen -wipe'
+alias act='. bin/activate; cd src'
 
 # Fix common mistakes.
 alias cd.='cd .'
