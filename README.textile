@@ -1,0 +1,52 @@
+h1. The Most Epic Zsh Configuration. Period.
+
+* Targeted support for Linux and Mac.
+* More aliases than you can shake a stick at.
+* Mind-boggling aliases such as inline replacements and filename-based actions.
+* Per-host history files, perfect for cloud environments with distributed home folders.
+* Within a single host history files are cross-session shared.
+* Syntax highlighting of your input.
+* Left prompt:
+** Coloured username-at-hostname.  (Green for users, red for root.)
+** Dynamically rooted path; the root of a Python virtual environment acts like a replacement for the tilde display shortcut.
+** Dynamic prompt symbol.  A dollar sign normally, but changes to the logo of the SCM system in use.
+* Right prompt:
+** Exit code if non-zero.
+** SCM branch and status flag if within a Git, Hg, or SVN repository.
+** Python virtual environment name, if active.
+** Load average.
+* Xterm-256 colour with handy @rgb@ colour code calculator.
+* Clearly organized and fairly heavily commented.
+* Utilizes third-party packages as git submodules:
+** "oh-my-zsh":https://github.com/robbyrussell/oh-my-zsh
+** "zsh-completions":https://github.com/zsh-users/zsh-completions
+* Pre-configured for spellcheck and a raft of other zsh extensions.
+* …and a whole lot more!
+
+!=http://f.cl.ly/items/1S1y1L250G2h1R1s2y0r/Screen%20Shot%202012-06-06%20at%2010.18.05%20AM.PNG!
+
+
+h2. Installation
+
+First, somehow set your default prompt to be @zsh@ if it isn't already, then:
+
+<pre><code>cd $HOME
+git clone https://github.com/amcgregor/snippits.git .zsh
+(cd .zsh; git checkout zsh; git submodule init; git submodule update)
+ln -s .zsh/.zshrc
+source .zshrc
+reset</code></pre>
+
+h3. Staying Up-to-Date
+
+<pre><code>cd $HOME/.zsh
+git pull
+git submodule update
+reload</code></pre>
+
+(Pssst, you might want to stick that in a cron job, just leave out the @reload@ bit.)
+
+
+h2. License
+
+Public domain.  Do what you will.
