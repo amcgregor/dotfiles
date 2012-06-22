@@ -4,6 +4,10 @@ bq. This branch contains my common pool of Git hooks for, most notably, pre-comm
 
 To use these simply check out a copy of this repository somewhere and switch to the @hooks@ branch, then symlink the hooks you want into your own repository's @.git/hooks@ folder.  (Create the folder if it doesn't exist.)
 
+h2. clear-bytecode
+
+This hook can be used as both a @post-checkout@ (used when switching branches or resetting files) and @post-merge@ and helps prevent hard-to-diagnose scenarios for Python developers with stale compiled bytecode files.  (Python allows you to ship bytecode, thus it can still import a stale bytecode file that has no accompanying source code!)
+
 h2. pre-commit-django
 
 This hook is geared towards a Django project as it calls @manage.py validate@ as the first check.  Removing this check makes the hook suitable for any Python project, though classifying use of @print@ (except in very specific areas of your application) may be too restrictive for some projects.
