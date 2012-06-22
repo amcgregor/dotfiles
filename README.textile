@@ -1,0 +1,6 @@
+h1. Git Hooks
+
+bq. This branch contains my common pool of Git hooks for, most notably, pre-commit and post-merge.
+
+To use these simply check out a copy of this repository somewhere and switch to the @hooks@ branch, then symlink the hooks you want into your own repository's @.git/hooks@ folder.  (Create the folder if it doesn't exist.)
+
