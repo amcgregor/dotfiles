@@ -4,3 +4,10 @@ bq. This branch contains my common pool of Git hooks for, most notably, pre-comm
 
 To use these simply check out a copy of this repository somewhere and switch to the @hooks@ branch, then symlink the hooks you want into your own repository's @.git/hooks@ folder.  (Create the folder if it doesn't exist.)
 
+h2. pre-commit-django
+
+This hook is geared towards a Django project as it calls @manage.py validate@ as the first check.  Removing this check makes the hook suitable for any Python project, though classifying use of @print@ (except in very specific areas of your application) may be too restrictive for some projects.
+
+Here's an example of the output:
+
+p=. !http://f.cl.ly/items/2Y41153r012D060Q0M31/Screen%20Shot%202012-06-22%20at%206.48.56%20PM.PNG!
