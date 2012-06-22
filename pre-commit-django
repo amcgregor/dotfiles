@@ -75,13 +75,13 @@ def run_check(check, files):
     failed = process.returncode != check.get('expect', 0)
     
     if failed:
-        print "   \033[37m<\033[0m", cmd
+        print " \033[1;36m*\033[0m", cmd
         
         if out:
-            print "   \033[1;33m>\033[0m " + "\n   \033[1;33m>\033[0m ".join(out.strip().splitlines())
+            print " \033[1;33m*\033[0m " + "\n \033[1;33m*\033[0m ".join(out.strip().splitlines())
         
         if err:
-            print "   \033[1;31m!\033[0m " + "\n   \033[1;31m!\033[0m ".join(err.strip().splitlines())
+            print " \033[1;31m*\033[0m " + "\n \033[1;31m*\033[0m ".join(err.strip().splitlines())
     
     return int(failed)
 
