@@ -108,8 +108,7 @@ def main():
 
     # Unstash the changes.
 
-    subprocess.call(['git', 'reset', '--hard'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    subprocess.call(['git', 'stash', 'pop', '-q'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.call(['git', 'stash', 'pop', '-q', '--index'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     return result
 
