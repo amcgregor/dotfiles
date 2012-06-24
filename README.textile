@@ -4,3 +4,4 @@ bq. This branch contains my common pool of Git hooks for, most notably, pre-comm
 
 To use these simply check out a copy of this repository somewhere and switch to the @hooks@ branch, then symlink the hooks you want into your own repository's @.git/hooks@ folder.  (Create the folder if it doesn't exist.)
 
+If you don't want colors for some reason, set the COLORFUL environment variable to "No".

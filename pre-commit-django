@@ -14,8 +14,12 @@ import re
 import subprocess
 import sys
 
+from shared import colors
+
 # Check if there should be colorful output
-colors_enabled = True if os.environ.get('COLORFUL', False) == 'True' else False
+colors_enabled = sys.__stdout__.isatty() # __stdout__ because of planned proxy
+if os.environ.get('COLORFUL', '').lower() == 'no':
+    colors_enabled = False
 
 modified = re.compile('^(?:M|A)(\s+)(?P<name>.*)')
 
@@ -77,23 +81,13 @@ def run_check(check, files):
     failed = process.returncode != check.get('expect', 0)
     
     if failed:
-        if colors_enabled:
-            print "   \033[37m<\033[0m", cmd
-            
-            if out:
-                print "   \033[1;33m>\033[0m " + "\n   \033[1;33m>\033[0m ".join(out.strip().splitlines())
-            
-            if err:
-                print "   \033[1;31m!\033[0m " + "\n   \033[1;31m!\033[0m ".join(err.strip().splitlines())
-        else:
-            print "   <", cmd
-
-            if out:
-                print "   > " + "\n   > ".join(out.strip().splitlines())
-
-            if err:
-                print "   ! " + "\n   ! ".join(err.strip().splitlines())
-                
+        print "   {info}<{r} {0}".format(cmd, **colors)
+        
+        if out:
+            print ("   {warn}>{r} " + "\n   {warn}>{r} ".join(out.strip().splitlines())).format(**colors)
+        
+        if err:
+            print ("   {error}!{r} " + "\n   {error}!{r} ".join(err.strip().splitlines())).format(**colors)
     
     return int(failed)
 
@@ -111,21 +105,13 @@ def main():
     
     # Run each check.
     for check in CHECKS:
-        if colors_enabled:
-            if 'output' in check:
-                print " \033[1;32m*\033[0m " + check['output']
-            elif 'label' in check:
-                print " \033[1;32m*\033[0m Checking for \033[1m" + check['label'] + '\033[0m...'
-            else:
-                print " \033[1;32m*\033[0m Running: \033[1m" + check['command'].replace('{0}', '').strip() + '\033[0m'
+        if 'output' in check:
+            print " {ok}*{r} {0}".format(check['output'], **colors)
+        elif 'label' in check:
+            print " {ok}*{r} Checking for {b}{0}{r}".format(check['label'], **colors)
         else:
-            if 'output' in check:
-                print " * " + check['output']
-            elif 'label' in check:
-                print " * Checking for " + check['label'] + '...'
-            else:
-                print " * Running: " + check['command'].replace('{0}', '').strip() + '\033[0m'
-        
+            print " {ok}*{r} Running: {b}{0}{r}".format(check['command'].replace('{0}', '').strip(), **colors)
+
         result = run_check(check, files) or result
     
     # Unstash the changes.
