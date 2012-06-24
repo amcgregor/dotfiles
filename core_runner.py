@@ -19,7 +19,7 @@ import sys
 from shared import colors
 
 class ANSIColorStripper(object):
-    filter = re.compile(r"\033\[\d+(;\d)*m")
+    filter = re.compile(r"\033\[\d+(;\d+)*m")
     def write(self, msg):
         sys.__stdout__.write(self.filter.sub('', msg))
 
