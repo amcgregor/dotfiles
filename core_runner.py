@@ -21,6 +21,15 @@ colors_enabled = sys.__stdout__.isatty() # __stdout__ because of planned proxy
 if os.environ.get('COLORFUL', '').lower() == 'no':
     colors_enabled = False
 
+
+class ANSIColorStripper(object):
+    filter = re.compile(r"\033\[\d+(;\d)*m")
+    def write(self, msg):
+        sys.__stdout__.write(self.filter.sub('', msg))
+
+if not colors_enabled:
+    sys.stdout = ANSIColorStripper()
+
 modified = re.compile('^(?:M|A)(\s+)(?P<name>.*)')
 
 ACK_BASE = '''ack --context=1 --color --sort-files '''
