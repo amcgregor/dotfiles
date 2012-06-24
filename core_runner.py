@@ -8,6 +8,8 @@ Updated to use ack (it's faster, targeted, automatically ignores .git).
 Also updated to collapse several checks into one (e.g. pdb/ipdb).
 """
 
+from __future__ import print_function
+
 import os
 import pipes
 import re
@@ -16,10 +18,18 @@ import sys
 
 from shared import colors
 
+class ANSIColorStripper(object):
+    filter = re.compile(r"\033\[\d+(;\d)*m")
+    def write(self, msg):
+        sys.__stdout__.write(self.filter.sub('', msg))
+
 # Check if there should be colorful output
 colors_enabled = sys.__stdout__.isatty() # __stdout__ because of planned proxy
 if os.environ.get('COLORFUL', '').lower() == 'no':
     colors_enabled = False
+
+if not colors_enabled:
+    sys.stdout = ANSIColorStripper()
 
 modified = re.compile('^(?:M|A)(\s+)(?P<name>.*)')
 
@@ -66,13 +76,13 @@ def run_check(check, files):
     failed = process.returncode != check.get('expect', 0)
     
     if failed:
-        print "   {info}<{r} {0}".format(cmd, **colors)
+        print("   {info}<{r} {0}".format(cmd, **colors))
         
         if out:
-            print ("   {warn}>{r} " + "\n   {warn}>{r} ".join(out.strip().splitlines())).format(**colors)
+            print(("   {warn}>{r} " + "\n   {warn}>{r} ".join(out.strip().splitlines())).format(**colors))
         
         if err:
-            print ("   {error}!{r} " + "\n   {error}!{r} ".join(err.strip().splitlines())).format(**colors)
+            print(("   {error}!{r} " + "\n   {error}!{r} ".join(err.strip().splitlines())).format(**colors))
     
     return int(failed)
 
@@ -91,11 +101,11 @@ def main():
     # Run each check.
     for check in CHECKS:
         if 'output' in check:
-            print " {ok}*{r} {0}".format(check['output'], **colors)
+            print(" {ok}*{r} {0}".format(check['output'], **colors))
         elif 'label' in check:
-            print " {ok}*{r} Checking for {b}{0}{r}".format(check['label'], **colors)
+            print(" {ok}*{r} Checking for {b}{0}{r}".format(check['label'], **colors))
         else:
-            print " {ok}*{r} Running: {b}{0}{r}".format(check['command'].replace('{0}', '').strip(), **colors)
+            print(" {ok}*{r} Running: {b}{0}{r}".format(check['command'].replace('{0}', '').strip(), **colors))
 
         result = run_check(check, files) or result
     
