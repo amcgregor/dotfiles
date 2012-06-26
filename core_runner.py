@@ -25,8 +25,13 @@ class ANSIColorStripper(object):
 
 # Check if there should be colorful output
 colors_enabled = sys.__stdout__.isatty() # __stdout__ because of planned proxy
-if os.environ.get('COLORFUL', '').lower() == 'no':
+
+colorful = os.environ.get('COLORFUL', '').lower()
+if colorful == 'no':
     colors_enabled = False
+elif colorful == 'yes':
+    colors_enabled = True
+    
 
 if not colors_enabled:
     sys.stdout = ANSIColorStripper()
