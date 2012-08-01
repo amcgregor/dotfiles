@@ -51,3 +51,7 @@ alias cd/='cd /'
 
 # Process management.
 alias p='ps ax'
+
+# Making nano suck less.
+# See also: http://en.gentoo-wiki.com/wiki/Nano_syntax_highlighting
+alias nano='nano -w -A -E -i -T 4'
