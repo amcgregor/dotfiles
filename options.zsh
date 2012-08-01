@@ -29,5 +29,6 @@ setopt pushd_minus # Reverse the meaning of +/- after pushing the CWD.
 setopt pushd_to_home # With no arguments act like 'pushd $HOME'.
 setopt pushdsilent
 setopt rc_quotes
+setopt transientrprompt
 
 unsetopt flow_control
