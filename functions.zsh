@@ -8,6 +8,5 @@ fpath=($ZDOTDIR/func $fpath)
 # Second, check to see if we just entered a virtual environment; if so, activate.
 function chpwd() {
     emulate -L zsh
-    ls -a
     [[ -e bin/activate ]] && source bin/activate
 }
