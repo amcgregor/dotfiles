@@ -47,9 +47,8 @@ CHECKS = [
                 expect=1
             ),
         dict(
-                label="git conflicts",
-                command=PY_BASE + '''--ignore-dir=cli --ignore-dir=management --ignore-dir=commands --ignore-dir=migrations --ignore-dir=tests "^<|>|={{7}}$" {0} 1>&2''',
-                filter=PY_FILES,
+                label="git conflict markers",
+                command=ACK_BASE + '''--ignore-dir=cli --ignore-dir=management --ignore-dir=commands --ignore-dir=migrations --ignore-dir=tests "^<|>|={{7}}$" {0} 1>&2''',
                 expect=1
             ),
         dict(
