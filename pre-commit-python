@@ -47,6 +47,12 @@ CHECKS = [
                 expect=1
             ),
         dict(
+                label="git conflicts",
+                command=PY_BASE + '''--ignore-dir=cli --ignore-dir=management --ignore-dir=commands --ignore-dir=migrations --ignore-dir=tests "^<|>|={{7}}$" {0} 1>&2''',
+                filter=PY_FILES,
+                expect=1
+            ),
+        dict(
                 label="console.log()",
                 command=JS_BASE + '''console\.log {0}''',
                 filter=JS_FILES,
