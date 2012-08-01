@@ -23,7 +23,7 @@ JS_BASE = ACK_BASE + '--type=js '
 
 PY_FILES = lambda name: os.path.splitext(name)[1] == '.py'
 JS_FILES = lambda name: os.path.splitext(name)[1] == '.js'
-
+ALL_FILES = lambda name: True
 
 CHECKS = [
         dict(
@@ -98,7 +98,7 @@ def main():
     # Identify files modified in this commit.
     p = subprocess.Popen(['git', 'status', '--porcelain'], stdout=subprocess.PIPE)
     out, err = p.communicate()
-    files = [match.group('name') for match in map(modified.match, out.splitlines())]
+    files = [match.group('name') for match in map(modified.match, out.splitlines()) if match]
     
     result = 0
     
