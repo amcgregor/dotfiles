@@ -50,7 +50,7 @@ CHECKS = [
             ),
         dict(
                 label="git conflict markers",
-                command=ACK_BASE + '''--ignore-dir=cli --ignore-dir=management --ignore-dir=commands --ignore-dir=migrations --ignore-dir=tests "^<|>|={{7}}$" {0} 1>&2''',
+                command=ACK_BASE + '''--ignore-dir=cli --ignore-dir=management --ignore-dir=commands --ignore-dir=migrations --ignore-dir=tests "^(<|>|=){{7}}$" {0} 1>&2''',
                 expect=1
             ),
         dict(
