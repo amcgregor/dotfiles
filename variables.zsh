@@ -1,6 +1,9 @@
 # Alice's over-engineered z-shell configuration, released in the public domain.
 # Private and publicly exported variables.
 
+# Allow me to enter any of my project directories easily.
+cdpath+=(~/Projects)
+
 # Alert me when other users log in.
 watch=(notme)
 
