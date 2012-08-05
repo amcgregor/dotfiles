@@ -20,7 +20,12 @@ h1. The Most Epic Zsh Configuration. Period.
 * Utilizes third-party packages as git submodules:
 ** "oh-my-zsh":https://github.com/robbyrussell/oh-my-zsh
 ** "zsh-completions":https://github.com/zsh-users/zsh-completions
+** "zsh-syntax-highlighting":https://github.com/zsh-users/zsh-syntax-highlighting
 * Pre-configured for spellcheck and a raft of other zsh extensions.
+* Python Virtual Environment support that beats virtualenvwrapper:
+** Automatically activate any VENV you @cd@ to, and deactivate when leaving.
+** If your projects are stored in @~/Projects@ you can just type the name of a project to go there and activate.
+** When entering the root of a virtual environment, if a source folder exists you will automatically go there.
 * …and a whole lot more!
 
 !=http://f.cl.ly/items/1S1y1L250G2h1R1s2y0r/Screen%20Shot%202012-06-06%20at%2010.18.05%20AM.PNG!
