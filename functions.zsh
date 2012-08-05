@@ -14,7 +14,7 @@ sibling() { [[ ${1:a:h} == ${2:a:h} ]]  }
 function chpwd() {
     emulate -L zsh
     
-    [[ -n $VIRTUAL_ENV ]] && [[ "$VIRTUAL_ENV" != "$PWD" ]] && { parent $VIRTUAL_ENV $PWD || sibling $VIRTUAL_ENV $PWD } && deactivate
+    [[ -n $VIRTUAL_ENV ]] && { parent $PWD $VIRTUAL_ENV || deactivate }
     [[ -n $VIRTUAL_ENV ]] && return
     
     [[ -e bin/activate ]] && source bin/activate
