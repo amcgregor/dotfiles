@@ -1,12 +1,12 @@
 [submodule "gists/blueprint-vs-paste"]
 	path = gists/blueprint-vs-paste
-	url = git@gist.github.com:4082193.git
+	url = git://gist.github.com/4082193.git
 [submodule "gists/priv-django-chunk-iter"]
 	path = gists/priv-django-chunk-iter
 	url = git@gist.github.com:347f971185c14ba2ba4c.git
 [submodule "gists/tunnel"]
 	path = gists/tunnel
-	url = git@gist.github.com:3983451.git
+	url = git://gist.github.com/3983451.git
 [submodule "gists/priv-django-controllers"]
 	path = gists/priv-django-controllers
 	url = git@gist.github.com:0b75388ceaa5a81c496c.git
@@ -30,208 +30,208 @@
 	url = git@gist.github.com:bbbb5be82f0117b9edda.git
 [submodule "gists/nginx-conf"]
 	path = gists/nginx-conf
-	url = git@gist.github.com:3240964.git
+	url = git://gist.github.com/3240964.git
 [submodule "gists/casper-capture"]
 	path = gists/casper-capture
-	url = git@gist.github.com:3220464.git
+	url = git://gist.github.com/3220464.git
 [submodule "gists/priv-python-colorcode"]
 	path = gists/priv-python-colorcode
 	url = git@gist.github.com:790a8cb92da18b22041e.git
 [submodule "gists/blog-immortal-tech"]
 	path = gists/blog-immortal-tech
-	url = git@gist.github.com:3133634.git
+	url = git://gist.github.com/3133634.git
 [submodule "gists/webcore-pureconfig"]
 	path = gists/webcore-pureconfig
-	url = git@gist.github.com:3128689.git
+	url = git://gist.github.com/3128689.git
 [submodule "gists/webcore-comparison-1"]
 	path = gists/webcore-comparison-1
-	url = git@gist.github.com:3119134.git
+	url = git://gist.github.com/3119134.git
 [submodule "gists/webcore-config-1"]
 	path = gists/webcore-config-1
-	url = git@gist.github.com:3107244.git
+	url = git://gist.github.com/3107244.git
 [submodule "gists/django-wtf-1"]
 	path = gists/django-wtf-1
-	url = git@gist.github.com:3086505.git
+	url = git://gist.github.com/3086505.git
 [submodule "gists/turbocmf-stargate"]
 	path = gists/turbocmf-stargate
-	url = git@gist.github.com:3076881.git
+	url = git://gist.github.com/3076881.git
 [submodule "gists/struct-schema"]
 	path = gists/struct-schema
-	url = git@gist.github.com:3048070.git
+	url = git://gist.github.com/3048070.git
 [submodule "gists/c-islink"]
 	path = gists/c-islink
-	url = git@gist.github.com:2968456.git
+	url = git://gist.github.com/2968456.git
 [submodule "gists/python-scripting-1"]
 	path = gists/python-scripting-1
-	url = git@gist.github.com:2945155.git
+	url = git://gist.github.com/2945155.git
 [submodule "gists/django-jsonp"]
 	path = gists/django-jsonp
-	url = git@gist.github.com:2933290.git
+	url = git://gist.github.com/2933290.git
 [submodule "gists/bulk-mailer"]
 	path = gists/bulk-mailer
-	url = git@gist.github.com:2898542.git
+	url = git://gist.github.com/2898542.git
 [submodule "gists/python-iteration"]
 	path = gists/python-iteration
-	url = git@gist.github.com:2898119.git
+	url = git://gist.github.com/2898119.git
 [submodule "gists/python-iteration-2"]
 	path = gists/python-iteration-2
-	url = git@gist.github.com:2897953.git
+	url = git://gist.github.com/2897953.git
 [submodule "gists/python-deque-bisect-test"]
 	path = gists/python-deque-bisect-test
-	url = git@gist.github.com:2878665.git
+	url = git://gist.github.com/2878665.git
 [submodule "gists/webcore-method"]
 	path = gists/webcore-method
-	url = git@gist.github.com:2788813.git
+	url = git://gist.github.com/2788813.git
 [submodule "gists/nginx-django-php"]
 	path = gists/nginx-django-php
-	url = git@gist.github.com:2781607.git
+	url = git://gist.github.com/2781607.git
 [submodule "gists/python-vs-js-style"]
 	path = gists/python-vs-js-style
-	url = git@gist.github.com:2727212.git
+	url = git://gist.github.com/2727212.git
 [submodule "gists/python-object-dispatch"]
 	path = gists/python-object-dispatch
-	url = git@gist.github.com:2713943.git
+	url = git://gist.github.com/2713943.git
 [submodule "gists/nginx-pub-sub-chat"]
 	path = gists/nginx-pub-sub-chat
-	url = git@gist.github.com:2712270.git
+	url = git://gist.github.com/2712270.git
 [submodule "gists/python-bulk-downloader"]
 	path = gists/python-bulk-downloader
-	url = git@gist.github.com:2360668.git
+	url = git://gist.github.com/2360668.git
 [submodule "gists/monitoring-sample"]
 	path = gists/monitoring-sample
-	url = git@gist.github.com:2032211.git
+	url = git://gist.github.com/2032211.git
 [submodule "gists/git-precommit-filestat"]
 	path = gists/git-precommit-filestat
-	url = git@gist.github.com:2024932.git
+	url = git://gist.github.com/2024932.git
 [submodule "gists/marrow-mailer-service"]
 	path = gists/marrow-mailer-service
-	url = git@gist.github.com:1959335.git
+	url = git://gist.github.com/1959335.git
 [submodule "gists/jquery-nhpm"]
 	path = gists/jquery-nhpm
-	url = git@gist.github.com:1821386.git
+	url = git://gist.github.com/1821386.git
 [submodule "gists/python-pluginhost"]
 	path = gists/python-pluginhost
-	url = git@gist.github.com:1756292.git
+	url = git://gist.github.com/1756292.git
 [submodule "gists/python-mini-desc"]
 	path = gists/python-mini-desc
-	url = git@gist.github.com:1718666.git
+	url = git://gist.github.com/1718666.git
 [submodule "gists/mongo-map-reduce-test"]
 	path = gists/mongo-map-reduce-test
-	url = git@gist.github.com:1623352.git
+	url = git://gist.github.com/1623352.git
 [submodule "gists/sqlalchemy-nested-set-adjacency-list"]
 	path = gists/sqlalchemy-nested-set-adjacency-list
-	url = git@gist.github.com:1562635.git
+	url = git://gist.github.com/1562635.git
 [submodule "gists/webcore-context"]
 	path = gists/webcore-context
-	url = git@gist.github.com:1537178.git
+	url = git://gist.github.com/1537178.git
 [submodule "gists/gentoo-motd"]
 	path = gists/gentoo-motd
-	url = git@gist.github.com:1522110.git
+	url = git://gist.github.com/1522110.git
 [submodule "gists/automaton-doodle"]
 	path = gists/automaton-doodle
-	url = git@gist.github.com:1502863.git
+	url = git://gist.github.com/1502863.git
 [submodule "gists/gentoo-user-etc-cron"]
 	path = gists/gentoo-user-etc-cron
-	url = git@gist.github.com:1481626.git
+	url = git://gist.github.com/1481626.git
 [submodule "gists/webcore-components"]
 	path = gists/webcore-components
-	url = git@gist.github.com:1473165.git
+	url = git://gist.github.com/1473165.git
 [submodule "gists/automaton-doc"]
 	path = gists/automaton-doc
-	url = git@gist.github.com:1438706.git
+	url = git://gist.github.com/1438706.git
 [submodule "gists/dispatch-comparison"]
 	path = gists/dispatch-comparison
-	url = git@gist.github.com:1376850.git
+	url = git://gist.github.com/1376850.git
 [submodule "gists/github-issue-colors"]
 	path = gists/github-issue-colors
-	url = git@gist.github.com:1364772.git
+	url = git://gist.github.com/1364772.git
 [submodule "gists/blog-qotd-marrow-logging"]
 	path = gists/blog-qotd-marrow-logging
-	url = git@gist.github.com:1353000.git
+	url = git://gist.github.com/1353000.git
 [submodule "gists/mongoengine-tuneable"]
 	path = gists/mongoengine-tuneable
-	url = git@gist.github.com:1349231.git
+	url = git://gist.github.com/1349231.git
 [submodule "gists/python-dsl-bdd-tests"]
 	path = gists/python-dsl-bdd-tests
-	url = git@gist.github.com:1338661.git
+	url = git://gist.github.com/1338661.git
 [submodule "gists/obj-c-notes"]
 	path = gists/obj-c-notes
-	url = git@gist.github.com:1265265.git
+	url = git://gist.github.com/1265265.git
 [submodule "gists/python-bdd-1"]
 	path = gists/python-bdd-1
-	url = git@gist.github.com:1190561.git
+	url = git://gist.github.com/1190561.git
 [submodule "gists/marrow-texting-idea"]
 	path = gists/marrow-texting-idea
-	url = git@gist.github.com:1162381.git
+	url = git://gist.github.com/1162381.git
 [submodule "gists/webcore-registry-idea"]
 	path = gists/webcore-registry-idea
-	url = git@gist.github.com:1155136.git
+	url = git://gist.github.com/1155136.git
 [submodule "gists/webcore-router-idea"]
 	path = gists/webcore-router-idea
-	url = git@gist.github.com:1155131.git
+	url = git://gist.github.com/1155131.git
 [submodule "gists/poundpython"]
 	path = gists/poundpython
-	url = git@gist.github.com:1135902.git
+	url = git://gist.github.com/1135902.git
 [submodule "gists/daemon-cli"]
 	path = gists/daemon-cli
-	url = git@gist.github.com:1082683.git
+	url = git://gist.github.com/1082683.git
 [submodule "gists/python-enum-bitfield"]
 	path = gists/python-enum-bitfield
-	url = git@gist.github.com:1078067.git
+	url = git://gist.github.com/1078067.git
 [submodule "gists/pyramid-mailer"]
 	path = gists/pyramid-mailer
-	url = git@gist.github.com:1062364.git
+	url = git://gist.github.com/1062364.git
 [submodule "gists/python-futures-threading"]
 	path = gists/python-futures-threading
-	url = git@gist.github.com:1046116.git
+	url = git://gist.github.com/1046116.git
 [submodule "gists/python-webapp"]
 	path = gists/python-webapp
-	url = git@gist.github.com:926617.git
+	url = git://gist.github.com/926617.git
 [submodule "gists/omnidomo-idea"]
 	path = gists/omnidomo-idea
-	url = git@gist.github.com:911991.git
+	url = git://gist.github.com/911991.git
 [submodule "gists/python-transparent-proxy"]
 	path = gists/python-transparent-proxy
-	url = git@gist.github.com:789193.git
+	url = git://gist.github.com/789193.git
 [submodule "gists/marrow-httpd-test-threading"]
 	path = gists/marrow-httpd-test-threading
-	url = git@gist.github.com:770893.git
+	url = git://gist.github.com/770893.git
 [submodule "gists/python-timeit-1"]
 	path = gists/python-timeit-1
-	url = git@gist.github.com:754869.git
+	url = git://gist.github.com/754869.git
 [submodule "gists/marrow-config-sample-1"]
 	path = gists/marrow-config-sample-1
-	url = git@gist.github.com:740202.git
+	url = git://gist.github.com/740202.git
 [submodule "gists/wsgi-chunked"]
 	path = gists/wsgi-chunked
-	url = git@gist.github.com:740156.git
+	url = git://gist.github.com/740156.git
 [submodule "gists/marrow-tags-master-page"]
 	path = gists/marrow-tags-master-page
-	url = git@gist.github.com:728379.git
+	url = git://gist.github.com/728379.git
 [submodule "gists/python-mock-httpd"]
 	path = gists/python-mock-httpd
-	url = git@gist.github.com:719889.git
+	url = git://gist.github.com/719889.git
 [submodule "gists/python-async-chat"]
 	path = gists/python-async-chat
-	url = git@gist.github.com:714970.git
+	url = git://gist.github.com/714970.git
 [submodule "gists/marrow-httpd-test-c10k"]
 	path = gists/marrow-httpd-test-c10k
-	url = git@gist.github.com:707936.git
+	url = git://gist.github.com/707936.git
 [submodule "gists/poundpython-lessons"]
 	path = gists/poundpython-lessons
-	url = git@gist.github.com:701213.git
+	url = git://gist.github.com/701213.git
 [submodule "gists/python-irc-bot"]
 	path = gists/python-irc-bot
-	url = git@gist.github.com:441969.git
+	url = git://gist.github.com/441969.git
 [submodule "gists/python-timeit"]
 	path = gists/python-timeit
-	url = git@gist.github.com:405354.git
+	url = git://gist.github.com/405354.git
 [submodule "gists/whuffie"]
 	path = gists/whuffie
 	url = git@gist.github.com:2e5606c8fc8ba1c92224.git
 [submodule "gists/webcore-components-idea"]
 	path = gists/webcore-components-idea
-	url = git@gist.github.com:275048.git
+	url = git://gist.github.com/275048.git
 [submodule "gists/secure-rpc-dht-idea"]
 	path = gists/secure-rpc-dht-idea
-	url = git@gist.github.com:239295.git
+	url = git://gist.github.com/239295.git
