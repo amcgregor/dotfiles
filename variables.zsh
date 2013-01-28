@@ -16,7 +16,7 @@ WATCHFMT='%n %a %l from %m at %t.'
 
 export BROWSER='open'
 export CLICOLOR=1 LSCOLORS="ExGxFxDxCxDxDxhbhdacEc"
-export EDITOR='choc -w'
+export EDITOR='nano'
 export LESSOPEN="|lesspipe.sh %s"
 export VISUAL=$EDITOR
 
