@@ -1,6 +1,13 @@
 #!/bin/bash
 # Useful as both post-merge and post-checkout hook.
 
-echo -en " \033[1;32m*\033[0m Cleaning bytecode... "
+r='\033[0m'
+ok='\033[1;32m'
+if [ $COLORFUL = 'No' ]; then
+    r=''
+    ok=''
+fi
+
+echo -en " ${ok}*${r} Cleaning bytecode... "
 
 find . -name \*.py\[co\] -exec rm -f {} + > /dev/null && echo "done."

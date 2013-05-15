@@ -1,117 +1,17 @@
 #!/usr/bin/env python
 
-"""Based on the pre-commit hook found on this blog post:
-
-http://tech.yipit.com/2011/11/16/183772396/
-
-Updated to use ack (it's faster, targeted, automatically ignores .git).
-Also updated to collapse several checks into one (e.g. pdb/ipdb).
-"""
-
-from __future__ import print_function
-
-import os
-import pipes
-import re
-import subprocess
 import sys
 
+import core_runner
+from core_runner import PY_BASE, PY_FILES
 
-modified = re.compile('^(?:M|A)(\s+)(?P<name>.*)')
-
-ACK_BASE = '''ack --context=1 --color --sort-files '''
-PY_BASE = ACK_BASE + '--type=python '
-JS_BASE = ACK_BASE + '--type=js '
-
-PY_FILES = lambda name: os.path.splitext(name)[1] == '.py'
-JS_FILES = lambda name: os.path.splitext(name)[1] == '.js'
-
-
-CHECKS = [
-        dict(
-                label="pdb/ipdb imports",
-                command=PY_BASE + '''"(import i?pdb)|(__import__\(['\\"]i?pdb['\\"]\))" {0} 1>&2''',
-                filter=PY_FILES,
-                expect=1
-            ),
-        dict(
-                label="encoding declaration",
-                command=PY_BASE + '''--files-without-matches --max-count=1 "coding[:=]\s*([-\w.]+)" {0} 1>&2''',
-                filter=PY_FILES,
-                expect=1
-            ),
+core_runner.CHECKS = [
         dict(
                 label="pprint statements",
                 command=PY_BASE + '''"(^\s+pprint\s?\(?)|\.pprint\(" {0} 1>&2''',
                 filter=PY_FILES,
                 expect=1
-            ),
-        dict(
-                label="console.log()",
-                command=JS_BASE + '''console\.log {0}''',
-                filter=JS_FILES,
-                expect=1
-            ),
-        dict(
-                command='''pyflakes {0}''',
-                filter=PY_FILES
             )
-    ]
+    ] + core_runner.python_checks
 
-
-def run_check(check, files):
-    files = ' '.join(map(pipes.quote, filter(check.get('filter', bool), files)))
-
-    if not files and "{0}" in check['command']:
-        return
-
-    cmd = check['command'].format(files)
-
-    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-    out, err = process.communicate()
-
-    failed = process.returncode != check.get('expect', 0)
-
-    if failed:
-        print(" \033[1;36m*\033[0m", cmd)
-
-        if out:
-            print(" \033[1;33m*\033[0m " + "\n \033[1;33m*\033[0m ".join(out.strip().splitlines()))
-
-        if err:
-            print(" \033[1;31m*\033[0m " + "\n \033[1;31m*\033[0m ".join(err.strip().splitlines()))
-
-    return int(failed)
-
-
-def main():
-    # Stash changes to the working tree that are not part of this commit.
-    subprocess.call(['git', 'stash', '-u', '--keep-index'], stdout=subprocess.PIPE)
-
-    # Identify files modified in this commit.
-    p = subprocess.Popen(['git', 'status', '--porcelain'], stdout=subprocess.PIPE)
-    out, err = p.communicate()
-    files = [match.group('name') for match in map(modified.match, out.splitlines())]
-
-    result = 0
-
-    # Run each check.
-    for check in CHECKS:
-        if 'output' in check:
-            print(" \033[1;32m*\033[0m " + check['output'])
-        elif 'label' in check:
-            print(" \033[1;32m*\033[0m Checking for \033[1m" + check['label'] + '\033[0m...')
-        else:
-            print(" \033[1;32m*\033[0m Running: \033[1m" + check['command'].replace('{0}', '').strip() + '\033[0m')
-
-        result = run_check(check, files) or result
-
-    # Unstash the changes.
-
-    subprocess.call(['git', 'stash', 'pop', '-q', '--index'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-    return result
-
-
-if __name__ == '__main__':
-    sys.exit(main())
+sys.exit(core_runner.main())
