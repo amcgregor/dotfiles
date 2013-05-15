@@ -18,20 +18,35 @@ import sys
 
 from shared import colors
 
+# pulled from marrow.util.convert, Copyright (c) 2009-2011 Alice Bevan-McGregor and contributors.
+# MIT licensed
+def boolean(input):
+    try:
+        input = input.strip().lower()
+    except AttributeError:
+        return bool(input)
+
+    if input in ('yes', 'y', 'on', 'true', 't', '1'):
+        return True
+
+    if input in ('no', 'n', 'off', 'false', 'f', '0'):
+        return False
+
+    raise ValueError("Unable to convert {0!r} to a boolean value.".format(input))
+
 class ANSIColorStripper(object):
     filter = re.compile(r"\033\[\d+(;\d+)*m")
     def write(self, msg):
         sys.__stdout__.write(self.filter.sub('', msg))
 
 # Check if there should be colorful output
-colors_enabled = sys.__stdout__.isatty() # __stdout__ because of planned proxy
+colors_enabled = sys.__stdout__.isatty()
 
-colorful = os.environ.get('COLORFUL', '').lower()
-if colorful == 'no':
-    colors_enabled = False
-elif colorful == 'yes':
-    colors_enabled = True
-    
+# allow env var override
+try:
+    colors_enabled = boolean(os.environ['COLORFUL'])
+except KeyError:
+    pass
 
 if not colors_enabled:
     sys.stdout = ANSIColorStripper()
