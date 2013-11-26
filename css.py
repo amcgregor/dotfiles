@@ -1,6 +1,64 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+"""
+An example:
+.assetmenu:
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 1000
+    list-style-type: none
+    margin: 0
+    padding: 0.5em 0
+    line-height: 1em
+    
+    background: #8b8b8b
+    
+    li:
+        display: inline-block
+        position: relative
+        margin: 0 0.5em
+        
+        + li:
+            margin-left: 0
+        
+        a:
+            display: inline-block
+        
+        menu:
+            display: none
+            margin: 0
+            padding: 10px
+            width: auto
+            white-space: nowrap
+            -webkit-border-radius: 0 0 10px 10px
+            
+            li:
+                display: block
+                margin: 0
+                
+                a:
+                    display: block
+                
+                label:
+                    font-weight: normal
+                    display: block
+                
+                + li:
+                    margin-top: 10px / 2
+        
+        &:hover:
+            menu:
+                display: block
+                position: absolute
+                background-color: white
+
+    + header:
+        margin-top: 3em
+"""
+
 import sys
 import re
 import colorsys
