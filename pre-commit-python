@@ -47,6 +47,11 @@ CHECKS = [
                 expect=1
             ),
         dict(
+                label="git conflict markers",
+                command=ACK_BASE + '''--ignore-dir=cli --ignore-dir=management --ignore-dir=commands --ignore-dir=migrations --ignore-dir=tests "^(<|>|=){{7}}$" {0} 1>&2''',
+                expect=1
+            ),
+        dict(
                 label="console.log()",
                 command=JS_BASE + '''console\.log {0}''',
                 filter=JS_FILES,
@@ -91,7 +96,7 @@ def main():
     # Identify files modified in this commit.
     p = subprocess.Popen(['git', 'status', '--porcelain'], stdout=subprocess.PIPE)
     out, err = p.communicate()
-    files = [match.group('name') for match in map(modified.match, out.splitlines())]
+    files = [match.group('name') for match in map(modified.match, out.splitlines()) if match]
 
     result = 0
 
