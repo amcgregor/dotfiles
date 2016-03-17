@@ -1,2 +1,2 @@
-set guifont=Monofur:h18
+set guifont=monofur\ for\ Powerline:h18
 "colorscheme hybrid
