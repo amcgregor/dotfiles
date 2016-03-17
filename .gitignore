@@ -1,1 +1,30 @@
+# Mac OS X Artifacts
 .DS_Store
+
+# Mac OS X Home Folder Elements
+./Applications/
+./Desktop/
+./Documents/
+./Downloads/
+./Dropbox/
+./Library/
+./Movies/
+./Music/
+./My\ Games/
+./Pictures/
+./Projects/
+./Public/
+./Sites/
+./Transfer/
+./VirtualBox\ VMs/
+
+# Linux Home Folder Elements
+./bin/
+./include/
+./lib/
+./man/
+./share/
+./src/
+./usr/
+./var/
+./tmp/
