@@ -151,6 +151,8 @@ augroup configgroup
 	autocmd VimEnter * highlight clear SignColumn
 	autocmd FileType python setlocal commentstring=#\ %s
 	autocmd FileType python setlocal tabstop=4
+	autocmd FileType python setlocal noexpandtab
+	autocmd FileType python setlocal shiftwidth=4
 augroup END
 
 " }}}
@@ -212,7 +214,7 @@ let g:promptline_theme = 'airline'
 let g:promptline_preset = {
 		\'a': [ '$(basename $VIRTUAL_ENV 2>/dev/null)' ],
 		\'b': [ promptline#slices#cwd() ],
-		\'y': [ '$(git rev-parse --short HEAD 2>/dev/null)', promptline#slices#git_status() ],
+		\'y': [ promptline#slices#git_status(), '$(git rev-parse --short HEAD 2>/dev/null)' ],
 		\'z': [ promptline#slices#vcs_branch() ],
 		\'warn' : [ promptline#slices#last_exit_code(), promptline#slices#jobs() ]}
 
