@@ -1,30 +1,77 @@
 # Mac OS X Artifacts
 .DS_Store
+.Trash/
 
 # Mac OS X Home Folder Elements
-./Applications/
-./Desktop/
-./Documents/
-./Downloads/
-./Dropbox/
-./Library/
-./Movies/
-./Music/
-./My\ Games/
-./Pictures/
-./Projects/
-./Public/
-./Sites/
-./Transfer/
-./VirtualBox\ VMs/
+Applications/
+Desktop/
+Documents/
+Downloads/
+Dropbox/
+Library/
+Movies/
+Music/
+My\ Games/
+Pictures/
+Projects/
+Public/
+Sites/
+Transfer/
+VirtualBox\ VMs/
 
 # Linux Home Folder Elements
-./bin/
-./include/
-./lib/
-./man/
-./share/
-./src/
-./usr/
-./var/
-./tmp/
+bin/
+include/
+lib/
+man/
+share/
+src/
+usr/
+var/
+tmp/
+
+# Shell Artifacts
+.bash_*
+.ipython/
+.ptpython/
+.ptpython_history
+.zsh/
+.zshrc
+
+# UNIX-y Artifacts
+.cache/
+.config/
+.cups/
+.local/
+
+# Package Management Artifacts
+.cocoapods/
+.gem/
+.npm/
+.python-eggs/
+.tox/
+
+# Editor Artifacts
+.atom/
+.nano/
+.nanorc
+.viminfo
+
+# Sensitive
+.dropbox/
+.gnupg/
+.lesshst
+.oracle_jre_usage/
+.pypirc
+.python_history
+.pythonhist
+.rnd
+.slocdta/
+.sqlite_history
+.ssh/
+.subversion/
+
+# Gaaaaaaames!
+.ftb/
+
+
