@@ -1,3 +1,5 @@
+# Vim Modules
+
 [submodule ".vim/bundle/Apprentice"]
 	path = .vim/bundle/Apprentice
 	url = https://github.com/romainl/Apprentice.git
@@ -25,3 +27,10 @@
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+
+
+# Other Modules
+
+[submodule ".vim/bundle/vim-git-flow-format"]
+	path = .vim/bundle/vim-git-flow-format
+	url = https://github.com/renyard/vim-git-flow-format.git

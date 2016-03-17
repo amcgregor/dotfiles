@@ -1,0 +1,1 @@
+../bundle/Apprentice/colors/apprentice.vim

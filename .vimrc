@@ -167,6 +167,17 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
+let g:airline#extensions#branch#format = 'Git_flow_branch_format'
+let g:git_flow_prefixes = {
+	\ 'master': '',
+	\ 'develop': '',
+	\ 'feature': 'f/',
+	\ 'release': 'r/',
+	\ 'hotfix': 'h/',
+	\ 'support': 's/',
+	\ 'versiontag': 'v/'
+\ }
+
 " }}}
 
 " Custom Functions {{{
