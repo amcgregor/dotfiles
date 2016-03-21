@@ -270,19 +270,28 @@ set writebackup
 
 " Python "Mode" Configuration {{{
 
-let g:pymode = 1
-let g:pymode_doc = 1	" Show docstring for selected completion.
-let g:pymode_doc_bind = 'K'
-let g:pymode_folding = 1
-let g:pymode_indent = 0
-let g:pymode_quickfix_minheight = 0
-let g:pymode_trim_whitespaces = 0
+let g:pymode = 10	" Enable Pymode generally.
+let g:pymode_run_key = '<leader>r'	" Execute the script by pressing ',r'
+let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
+let g:pymode_lint_ignore = 'W191,W293,E251,W391'
+let g:pymode_lint_jump = 1	" Jump to the first lint error when detected. (Generally on save.)
+let g:pymode_quickfix_minheight = 1
+let g:pymode_quickfix_maxheight = 5
+let g:pymode_rope_autoimport = 1
+let g:pymode_rope_autoimport_generate = 0
+let g:pymode_rope_lookup_project = 1
+let g:pymode_rope_goto_definition_bind = '<leader>g'	" 'Go to definition' by pressing ',g'
+let g:pymode_rope_goto_definition_cmd = 'e'	" Jump to editing the file.
+let g:pymode_doc_bind = '<leader>k'	" Browse the documentation by pressing ',k'
+let g:pymode_folding = 1	" Allow fancy folding.
+let g:pymode_indent = 0	" Disable the default (space-based) indentation rules.
+let g:pymode_quickfix_minheight = 0	" Minimum height is invisible.
+let g:pymode_trim_whitespaces = 0	"We have our own whitespace policy.
 let g:pymode_options = 0
 let g:pymode_options_max_line_length = 119
 " let g:pymode_python = 'python3'
-let g:pymode_rope_lookup_project = 1
-let g:pymode_rope_autoimport = 1
-let g:pymode_lint_ignore = 'W191,W293,E251,W391'
+let g:pymode_lint_unmodified = 1
+let g:pymode_rope_rename_bind = '<leader>R'
 
 set tags=tags;$HOME/.vim/tags/
 
