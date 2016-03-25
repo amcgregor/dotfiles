@@ -1,5 +1,7 @@
 role="${${${(%):-%N}:t}[2,-1]}"
 
+echo "> $role"
+
 export ZDOTDIR="$HOME/.zsh"
 
 typeset -U scripts
@@ -8,8 +10,13 @@ scripts=(
 		"$ZDOTDIR/plugin/"*.$role(N)
 	)
 
-for script in $(ls -b $ZDOTDIR/hook/$role/* $ZDOTDIR/plugin/*/*.$role); do
+for script in $(ls -b "$ZDOTDIR/hook/$role/*" "$ZDOTDIR/plugin/*/*.$role"); do
+	cd "$(dirname "$script")"
+	echo "> CB $script"
+	echo "> PWD $pwd"
 	source "$script"
 done
 
 unset role scripts
+
+cd $HOME
