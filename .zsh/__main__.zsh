@@ -12,7 +12,7 @@ scripts=(
 
 for script in $ZDOTDIR/hook/$role/*; do
 	echo "> HK $script"
-	soruce "$script"
+	source "$script"
 done
 
 for script in $ZDOTDIR/plugin/*/*.$role; do

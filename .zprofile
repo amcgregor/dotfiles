@@ -1,1 +1,0 @@
-.zsh/__main__.zsh
