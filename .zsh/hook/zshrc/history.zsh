@@ -24,6 +24,8 @@ if [[ -z "$HISTFILE" ]]; then
 		
 		HISTFILE="$ZSH_CACHE_DIR/history/$(hostname -f)"
 	fi
+	
+	echo "HIST $HISTFILE"
 fi
 
 HISTSIZE=10000
