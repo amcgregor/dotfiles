@@ -1,0 +1,31 @@
+[user]
+	name = Alice Bevan-McGregor
+	email = alice@gothcandy.com
+	signingkey = A08CB165
+
+[credential]
+	helper = osxkeychain
+
+[push]
+	default = matching
+
+[core]
+	precomposeunicode = true
+	compression = 9
+
+[color]
+	grep = auto
+	interactive = auto
+	status = auto
+	showbranch = auto
+	ui = auto
+
+[help]
+	format = web
+	browser = open
+	autocorrect = 5
+
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
