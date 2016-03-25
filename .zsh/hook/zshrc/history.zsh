@@ -6,7 +6,7 @@ if [[ -z "$ZSH_CACHE_DIR" ]]; then
 	ZSH_CACHE_DIR="$HOME/.cache/zsh"
 	
 	# TODO: umask this private
-	[[ !-d "$ZSH_CACHE_DIR" ]] && mkdir -p $ZSH_CACHE_DIR
+	[[ !-e "$ZSH_CACHE_DIR" ]] && mkdir -p $ZSH_CACHE_DIR
 fi
 
 if [[ -z "$HISTFILE" ]]; then
