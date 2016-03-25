@@ -40,7 +40,6 @@ tmp/
 
 # UNIX-y Artifacts
 .cache/
-.config/
 .cups/
 .local/
 
