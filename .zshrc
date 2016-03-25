@@ -1,0 +1,1 @@
+.zsh/main/rc
