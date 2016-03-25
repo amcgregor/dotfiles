@@ -20,7 +20,7 @@ else echo -en " \033[1;32m*\033[0m"
 fi
 uptime
 
-echo -en " \033[1;32m&\033[0m Network Interfaces: \033[1m"
+echo -en " \033[1;32m*\033[0m Network Interfaces: \033[1m"
 ifconfig | grep "Link encap" | awk '{print $1}' | tr '\n' ' '
 echo -e "\033[0m"
 
