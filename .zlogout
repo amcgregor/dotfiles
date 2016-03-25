@@ -1,1 +1,1 @@
-.zsh/main/logout
+.zsh/__main__.zsh

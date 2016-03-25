@@ -1,1 +1,1 @@
-.zsh/main/rc
+.zsh/__main__.zsh

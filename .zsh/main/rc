@@ -1,1 +1,7 @@
-echo "zshrc"
+# Alice's over-engineered z-shell configuration.
+# Primary entry point.
+
+. common  # Include utilities shared by all entry points.
+
+azsh_load rc
+
