@@ -18,7 +18,7 @@ done
 for script in $ZDOTDIR/plugin/*/*.$role; do
 	cd "$(dirname "$script")"
 	echo "> CB $script"
-	echo "> PWD $pwd"
+	echo "> PWD $(pwd)"
 	source "$script"
 done
 
