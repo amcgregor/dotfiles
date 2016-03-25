@@ -8,6 +8,7 @@ case `tty` in
 		[[ -x /usr/bin/clear_console ]] && /usr/bin/clear_console --quiet || clear
 		;;
 	*)
-		echo "Bye, bye, $LOGNAME!"
-		echo
+		# TODO: Emit some statistics about the session.
+		# I.e. number of commands entered, time spent total v. in shell v. in child.
+		echo -e "Session closed.\n"
 esac
