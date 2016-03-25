@@ -6,7 +6,7 @@ if [[ -z "$ZSH_CACHE_DIR" ]]; then
 	ZSH_CACHE_DIR="$HOME/.cache/zsh"
 	
 	# TODO: umask this private
-	[[ !-e "$ZSH_CACHE_DIR" ]] && mkdir -p $ZSH_CACHE_DIR
+	[[ ! -d "$ZSH_CACHE_DIR" ]] && mkdir -p $ZSH_CACHE_DIR
 fi
 
 if [[ -z "$HISTFILE" ]]; then
@@ -16,7 +16,7 @@ if [[ -z "$HISTFILE" ]]; then
 	if [[ -r "${ZDOTDIR:-$HOME}/.zsh_history" ]]; then
 		HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
 	else
-		if [[ !-d "$ZSH_CACHE_DIR/history" ]]; then
+		if [[ ! -d "$ZSH_CACHE_DIR/history" ]]; then
 			# TODO: umask this private
 			mkdir -p "$ZSH_CACHE_DIR/history"
 			chmod 700 "$ZSH_CACHE_DIR/history"
