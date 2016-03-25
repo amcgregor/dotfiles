@@ -1,4 +1,4 @@
-role="${${${(%):-%N}:t}[1,-1]}"
+role="${${${(%):-%N}:t}[2,-1]}"
 
 export ZDOTDIR="$HOME/.zsh"
 
