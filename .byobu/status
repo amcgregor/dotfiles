@@ -1,2 +1,2 @@
-tmux_left="distro release whoami hostname session"
+tmux_left="whoami hostname session"
 tmux_right="network disk_io entropy reboot_required updates_available services users uptime processes load_average cpu_count cpu_freq memory swap disk ip_address date time"
