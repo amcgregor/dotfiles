@@ -10,12 +10,12 @@ scripts=(
 		"$ZDOTDIR/plugin/"*.$role(N)
 	)
 
-for script in "$ZDOTDIR/hook/$role/*"; do
+for script in $ZDOTDIR/hook/$role/*; do
 	echo "> HK $script"
 	soruce "$script"
 done
 
-for script in "$ZDOTDIR/plugin/*/*.$role"; do
+for script in $ZDOTDIR/plugin/*/*.$role; do
 	cd "$(dirname "$script")"
 	echo "> CB $script"
 	echo "> PWD $pwd"
