@@ -2,7 +2,7 @@
 # History management-specific zsh options.
 
 if [[ -z "$ZSH_CACHE_DIR" ]]; then
-	echo "!! zshrc/history ZSH_CACHE_DIR Set this elsewhere."
+#	echo "!! zshrc/history ZSH_CACHE_DIR Set this elsewhere."
 	ZSH_CACHE_DIR="$HOME/.cache/zsh"
 	
 	# TODO: umask this private
@@ -25,7 +25,7 @@ if [[ -z "$HISTFILE" ]]; then
 		HISTFILE="$ZSH_CACHE_DIR/history/$(hostname -f)"
 	fi
 	
-	echo "HIST $HISTFILE"
+#	echo "HIST $HISTFILE"
 fi
 
 HISTSIZE=10000
