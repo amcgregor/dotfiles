@@ -3,7 +3,7 @@
 
 [[ -o interactive ]] || return
 
-echo en "\n \033[1;32m*\033[0m "
+echo -en "\n \033[1;32m*\033[0m "
 lsb_release -d -s | sed s/\"//g
 
 echo -en " \033[1;32m*\033[0m "
