@@ -10,7 +10,7 @@
 
 [[ -d ~/.dotfiles ]] || return
 
-GIT_DIR="${HOME}/.dotfiles"
+export GIT_DIR="${HOME}/.dotfiles"
 
 
 function ebegin () {
@@ -38,5 +38,5 @@ theirs=`git ls-remote origin -h refs/heads/dotfiles`
 
 [[ "$ours" == "$theirs[(w)1]" ]] && eend || eend 1 "an update is availble"
 
-unset ours theirs
+unset ours theirs GIT_DIR
 
