@@ -10,8 +10,6 @@
 
 [[ -d ~/.dotfiles ]] || return
 
-export GIT_DIR="${HOME}/.dotfiles"
-
 
 function ebegin () {
 	echo -en " \033[1;32m*\033[0m $1... "
@@ -33,10 +31,10 @@ function eend () {
 
 ebegin "Checking for dotfiles update"
 
-ours=`git rev-parse HEAD`
-theirs=`git ls-remote origin -h refs/heads/dotfiles`
+ours=`env GIT_DIR="${HOME}/.dotfiles" git rev-parse HEAD`
+theirs=`env GIT_DIR="${HOME}/.dotfiles" git ls-remote origin -h refs/heads/dotfiles`
 
 [[ "$ours" == "$theirs[(w)1]" ]] && eend || eend 1 "an update is availble"
 
-unset ours theirs GIT_DIR
+unset ours theirs
 
