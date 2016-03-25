@@ -1,4 +1,6 @@
 [[ -o interactive ]] || return
 
-[ -r "$HOME/.byobu/prompt" ] && [ -d /usr/share/byobu ] && . "$HOME/.byobu/prompt"
+[[ -x /usr/bin/byobu-launch ]] || return
+
+_byobu_sourced=1 . /usr/bin/byobu-launch
 
