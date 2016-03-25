@@ -35,8 +35,6 @@ tmp/
 .ipython/
 .ptpython/
 .ptpython_history
-.zsh/
-.zshrc
 
 # UNIX-y Artifacts
 .cache/
