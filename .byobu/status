@@ -1,2 +1,2 @@
-tmux_left="whoami hostname session"
-tmux_right="network disk_io entropy reboot_required updates_available services users uptime processes load_average cpu_count cpu_freq memory swap disk ip_address date time"
+tmux_left="whoami users hostname updates_available reboot_required session"
+tmux_right="network disk_io entropy cpu_count cpu_freq processes memory swap disk date time uptime load_average ip_address"
