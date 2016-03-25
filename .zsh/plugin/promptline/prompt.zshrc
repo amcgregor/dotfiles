@@ -2,4 +2,4 @@
 
 [[ -o interactive ]] || return
 
-. shell_prompt.sh
+. $ZDOTDIR/plugin/promptline/shell_prompt.sh
