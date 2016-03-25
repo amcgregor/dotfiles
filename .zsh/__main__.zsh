@@ -10,5 +10,6 @@ scripts=(
 
 for script in $(ls -b $ZDOTDIR/hook/$role/* $ZDOTDIR/plugin/*/*.$role); do
 	source "$script"
+done
 
 unset role scripts
