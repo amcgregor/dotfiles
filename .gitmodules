@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/python-mode"]
 	path = .vim/bundle/python-mode
 	url = https://github.com/wilywampa/python-mode.git
+[submodule ".zsh/plugin/highlight"]
+	path = .zsh/plugin/highlight
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
