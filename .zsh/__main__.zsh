@@ -4,12 +4,6 @@ role="${${${(%):-%N}:t}[2,-1]}"
 
 export ZDOTDIR="$HOME/.zsh"
 
-typeset -U scripts
-scripts=(
-		"$ZDOTDIR/hook/$role/"*(N)
-		"$ZDOTDIR/plugin/"*.$role(N)
-	)
-
 for script in $ZDOTDIR/hook/$role/*; do
 	# echo "> HK $script"
 	source "$script"
@@ -22,6 +16,6 @@ for script in $ZDOTDIR/plugin/*/*.$role; do
 	source "$script"
 done
 
-unset role scripts
+unset role script
 
 cd $HOME
