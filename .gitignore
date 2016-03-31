@@ -1,3 +1,7 @@
+# Ignore all non-hidden files by default.
+# There are some specific cases included for completeness sake.
+[a-zA-Z]*
+
 # Mac OS X Artifacts
 .DS_Store
 .Trash/
