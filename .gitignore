@@ -71,8 +71,11 @@ tmp/
 .sqlite_history
 .ssh/
 .subversion/
+.nano_history
 
 # Gaaaaaaames!
 .ftb/
 
+# Wat?
+.hushlogin
 
