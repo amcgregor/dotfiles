@@ -129,6 +129,9 @@ nnoremap <leader>l :call ToggleNumber()<CR>
 " Symbol list toggle.
 nnoremap <leader>t :TagbarToggle<CR>
 
+" Allow for quick hiding of the active search.
+nnoremap <leader><space> :noh<CR>
+
 " }}}
 
 " CtrlP (Fuzzy File Search) Settings {{{
@@ -145,6 +148,8 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " }}}
 
 " Language-Specific Settings {{{
+
+let g:xml_syntax_folding = 0
 
 augroup configgroup
 	autocmd!
