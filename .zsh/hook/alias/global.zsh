@@ -11,4 +11,5 @@ alias -g US='| sort -u'
 alias -g NS='| sort -n'
 alias -g RNS='| sort -nr'
 alias -g N='&> /dev/null'
-
+alias -g XA='| xargs'
+alias -g XAE='| xargs --no-run-if-empty'
