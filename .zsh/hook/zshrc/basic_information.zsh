@@ -28,7 +28,7 @@ if [[ -e /proc ]]; then
 	fi
 fi
 
-echo -en " \033[1;32m*\033[0m"
+echo -en " \033[1;32m*\033[0m "
 uptime
 
 if [[ -e /proc ]]; then
