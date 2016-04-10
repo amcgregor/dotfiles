@@ -52,3 +52,6 @@
 [submodule ".zsh/plugin/highlight"]
 	path = .zsh/plugin/highlight
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule ".zsh/plugin/comp"]
+	path = .zsh/plugin/comp
+	url = git://github.com/zsh-users/zsh-completions.git
