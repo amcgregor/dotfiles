@@ -1,0 +1,1 @@
+python -c "import base64, sys; print base64.encodestring(''.join(sys.argv[1:]))" $@

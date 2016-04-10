@@ -1,0 +1,1 @@
+python -c "import urllib, sys; print urllib.unquote(''.join(sys.argv[1:]))" $@
