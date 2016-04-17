@@ -4,5 +4,7 @@
 
 [[ ! -e ~/.no-byobu ]] || return
 
+[[ $TTY == /dev/tty([sS]|)<-> ]] || return
+
 _byobu_sourced=1 . $(which byobu-launch)
 
