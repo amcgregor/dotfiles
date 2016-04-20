@@ -12,9 +12,16 @@ if [[ ! -e $HOME/.ssh/known_hosts ]]; then
 fi
 
 # Initially, find everything in the system-level static hosts file.
-# Then, add SSH known hosts to it.  We need this file to exist, thus the preparation above.
-hosts=( \
-	$(cat /etc/hosts | grep -v "^#" | awk '{print $1}' | cut -d"," -f1), \
-	$(cat $HOME/.ssh/known_hosts | awk '{print $1}' | cut -d"," -f1) \
+# Then, add SSH known hosts to it.  We really want this file to exist, thus the preparation above.
+[ -r /etc/ssh/ssh_known_hosts ] && _global_ssh_hosts=(${${${${(f)"$(</etc/ssh/ssh_known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
+[ -r ~/.ssh/known_hosts ] && _ssh_hosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[\|]*}%%\ *}%%,*}) || _ssh_hosts=()
+[ -r /etc/hosts ] && : ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}} || _etc_hosts=()
+hosts=(
+  "$_global_ssh_hosts[@]"
+  "$_ssh_hosts[@]"
+  "$_etc_hosts[@]"
+  "$HOST"
+  localhost
 )
 
+zstyle ':completion:*:hosts' hosts $hosts
