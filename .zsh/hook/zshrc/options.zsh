@@ -35,8 +35,9 @@ shellopts[titlebar]=1     # Whether the titlebar can be dynamically changed
 shellopts[utf8]=1         # Set up a few programs for UTF-8 mode
 
 cdpath=(. $HOME/Projects $HOME/app $HOME/apps)
-
 watch=(notme)
+
+typeset -U cdpath watch
 
 LOGCHECK=60
 REPORTTIME=2
@@ -45,4 +46,11 @@ WATCHFMT='%n %a %l from %m at %t.'
 export EDITOR='vim'
 export VISUAL=$EDITOR
 export LESSOPEN="|lesspipe.sh %s"
+
+
+# Enable the definition of standard color codes.
+autoload -U colors
+colors
+
+setopt vi
 
