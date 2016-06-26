@@ -28,7 +28,7 @@ cp -rv ~/.config ~/.git ./
 rm -rf ~/.{byobu,config,git,vim,zsh}
 ```
 
-### 3. Symlink the contents into your home folder.
+### 5. Symlink the contents into your home folder.
 
 ```sh
 ln -s .{b*,c*,,g*,n*,v*,z*} ~/
