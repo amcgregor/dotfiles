@@ -1,6 +1,6 @@
 # Alice's Dotfiles
 
-These are a small collection of miscelaneous configuration files for GNU/Linux, BSD, or otherwise UN*X-ish software. To use:
+These are a small collection of miscellaneous configuration files for GNU/Linux, BSD, or otherwise UN*X-ish software. To use:
 
 ### 1. Obtain a copy of this repository.
 
@@ -9,11 +9,13 @@ git clone https://github.com/amcgregor/dotfiles.git
 cd dotfiles
 ```
 
+This should be done where you maintain your other git repositories, such as ~/Projects. Where ~/Projects is mentioned, substitute with the actual path to your holding directory like /Applications/MAMP/htdocs/dotfiles/.
+
 ### 2. Initialize and update submodules.
 
 ```sh
-git submodules init
-git submodules update
+git submodule init
+git submodule update
 ```
 
 ### 3. Update with your existing local files.
@@ -31,7 +33,7 @@ rm -rf ~/.{byobu,config,git,vim,zsh}
 ### 5. Symlink the contents into your home folder.
 
 ```sh
-ln -s .{b*,c*,,g*,n*,v*,z*} ~/
+ln -sf ~/Projects/.[a-z]* ~/
 ```
 
 ## Configuration
@@ -44,8 +46,10 @@ You'll want a copy of Homebrew, then use it to get a copy of zsh.
 
 ```sh
 brew install zsh ack
-sudo vim /etc/shells  # add /usr/local/bin/zsh
+sudo vim /etc/shells  # add the line: /usr/local/bin/zsh
 ```
 
-Then go to System Preferences, Users & Groups. Right-click your account, select Advanced Options, then set your shell to `/usr/local/bin/sh`.
+Exit vim by ESC out of input mode then :wq
+
+Then go to System Preferences, Users & Groups. Right-click your account, click the lock to enable changes, select Advanced Options, then set your shell to `/usr/local/bin/zsh`.
 
