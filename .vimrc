@@ -299,6 +299,7 @@ let g:pymode_options_max_line_length = 119
 " let g:pymode_python = 'python3'
 let g:pymode_lint_unmodified = 1
 let g:pymode_rope_rename_bind = '<leader>R'
+let g:pymode_rope_complete_on_dot = 0
 
 set tags=tags;$HOME/.vim/tags/
 
