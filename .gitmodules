@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/Conque-Shell"]
 	path = .vim/bundle/Conque-Shell
 	url = https://github.com/jewes/Conque-Shell.git
+[submodule ".vim/bundle/apiblueprint.vim"]
+	path = .vim/bundle/apiblueprint.vim
+	url = https://github.com/kylef/apiblueprint.vim.git
