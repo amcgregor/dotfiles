@@ -278,6 +278,7 @@ set writebackup
 " Python "Mode" Configuration {{{
 
 let g:pymode = 10	" Enable Pymode generally.
+let g:pymode_python = 'python3'
 let g:pymode_run_key = '<leader>r'	" Execute the script by pressing ',r'
 let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_lint_ignore = 'W191,W293,E251,W391'
@@ -296,7 +297,6 @@ let g:pymode_quickfix_minheight = 0	" Minimum height is invisible.
 let g:pymode_trim_whitespaces = 0	"We have our own whitespace policy.
 let g:pymode_options = 0
 let g:pymode_options_max_line_length = 119
-" let g:pymode_python = 'python3'
 let g:pymode_lint_unmodified = 1
 let g:pymode_rope_rename_bind = '<leader>R'
 let g:pymode_rope_complete_on_dot = 0
