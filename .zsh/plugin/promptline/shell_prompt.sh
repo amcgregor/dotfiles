@@ -2,6 +2,17 @@
 # This shell prompt config file was created by promptline.vim
 #
 
+# XXX: Added this from old config, updated for VIRTUAL_ROOT. -- amcgregor
+function apwd {
+    if [ $VIRTUAL_ROOT ]; then
+        echo "${PWD/#$VIRTUAL_ROOT/☇}"
+    elif [ $VIRTUAL_ENV ]; then
+        echo "${PWD/#$VIRTUAL_ENV/☇}"
+    else
+        echo "${PWD/#$HOME/~}"
+    fi
+}
+
 function __promptline_last_exit_code {
 
   [[ $last_exit_code -gt 0 ]] || return 1;
@@ -70,7 +81,7 @@ function __promptline_cwd {
   local dir_sep="  "
   local tilde="~"
 
-  local cwd="${PWD/#$HOME/$tilde}"
+  local cwd="$(apwd)"  # XXX: Modified this. -- amcgregor
 
   # get first char of the path, i.e. tilde or slash
   [[ -n ${ZSH_VERSION-} ]] && first_char=$cwd[1,1] || first_char=${cwd::1}
