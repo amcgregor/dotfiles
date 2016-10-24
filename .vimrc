@@ -309,9 +309,9 @@ let Tlist_Close_On_Select = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
 
-if has("macvim")
-let $PYTHONHOME="/Library/Frameworks/Python.framework/Versions/3.5"
-set pythonthreedll=/Library/Frameworks/Python.framework/Versions/3.5/lib/libpython3.5m.dylib
+if has('gui_macvim')
+	let $PYTHONHOME="/Library/Frameworks/Python.framework/Versions/3.5"
+	set pythonthreedll=/Library/Frameworks/Python.framework/Versions/3.5/lib/libpython3.5m.dylib
 endif
 
 " }}}
