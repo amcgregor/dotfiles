@@ -82,3 +82,6 @@
 [submodule ".vim/bundle/apiblueprint.vim"]
 	path = .vim/bundle/apiblueprint.vim
 	url = https://github.com/kylef/apiblueprint.vim.git
+[submodule ".vim/bundle/pytest.vim"]
+	path = .vim/bundle/pytest.vim
+	url = https://github.com/alfredodeza/pytest.vim.git
