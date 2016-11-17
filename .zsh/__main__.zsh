@@ -19,3 +19,5 @@ done
 unset role script
 
 cd $HOME
+
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
