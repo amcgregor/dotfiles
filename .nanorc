@@ -43,7 +43,7 @@ set wordbounds
 # set functioncolor yellow
 
 
-include "/usr/local/Cellar/nano/2.4.2_1/share/nano/*.nanorc"
+include "/usr/local/Cellar/nano/2.7.0/share/nano/*.nanorc"
 
 
 # bind M-W nowrap main
