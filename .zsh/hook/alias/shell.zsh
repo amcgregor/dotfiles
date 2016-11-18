@@ -44,6 +44,9 @@ alias v='less'
 alias screens='screen -ls'
 alias wipe='screen -wipe'
 alias act='. bin/activate; cd src'
+alias i='clear; ipython --TerminalIPythonApp.display_banner=False -i'
+alias shell='clear; ptipython -i `find . -maxdepth 2 -name run.py`'
+alias serve='clear; python `find . -maxdepth 2 -name run.py` serve'
 
 # Fix common mistakes.
 alias cd.='cd .'
