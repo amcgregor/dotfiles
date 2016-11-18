@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/pytest.vim"]
 	path = .vim/bundle/pytest.vim
 	url = https://github.com/alfredodeza/pytest.vim.git
+[submodule ".vim/bundle/coveragepy.vim"]
+	path = .vim/bundle/coveragepy.vim
+	url = https://github.com/alfredodeza/coveragepy.vim.git
