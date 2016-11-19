@@ -135,6 +135,13 @@ nnoremap <leader>t :TagbarToggle<CR>
 " Allow for quick hiding of the active search.
 nnoremap <leader><space> :noh<CR>
 
+" Toggle coverage gutter colouring.
+nnoremap <leader>m :Coveragepy show
+
+" Pytest execution.
+nnoremap <leader>T :Pytest project
+nnoremap <leader>M :Pytest method looponfail
+
 " }}}
 
 " CtrlP (Fuzzy File Search) Settings {{{
