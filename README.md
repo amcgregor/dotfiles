@@ -40,12 +40,12 @@ ln -sf ~/Projects/.[a-z]* ~/
 
 One major configuration directive should be customized by each user: your timezone. Update `.zsh/hook/zprofile/timezone.zsh` to set your own.
 
-## If you are on Mac...
+## If you are on macOS...
 
-You'll want a copy of Homebrew, then use it to get a copy of zsh.
+You'll want a copy of [Homebrew](http://brew.sh), then use it to get a copy of zsh and a few other useful tools utilized by this configuration set:
 
 ```sh
-brew install zsh ack
+brew install zsh ag ack ctags wget lesspipe
 sudo vim /etc/shells  # add the line: /usr/local/bin/zsh
 ```
 
