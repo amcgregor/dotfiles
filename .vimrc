@@ -123,7 +123,8 @@ nnoremap <leader>f :NERDTreeToggle<CR>
 nnoremap <leader>s :mksession<CR>
 
 " Rapidly search using ag.vim (ag command-line tool, like ack).
-nnoremap <leader>a :Ag
+nnoremap <leader>a :Ag 
+let g:ag_highlight=1
 
 " Toggle line number style.
 nnoremap <leader>l :call ToggleNumber()<CR>
@@ -244,7 +245,7 @@ endfunc
 " NERDTree Settings {{{
 
 let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$', '\.egg-info$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$', '\.egg-info$', '__pycache__']
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
@@ -313,6 +314,9 @@ if has('gui_macvim')
 	let $PYTHONHOME="/Library/Frameworks/Python.framework/Versions/3.5"
 	set pythonthreedll=/Library/Frameworks/Python.framework/Versions/3.5/lib/libpython3.5m.dylib
 endif
+
+let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
+" let $PATH="/Users/amcgregor/Projects/marrow/.venv/bin:$PATH"
 
 " }}}
 
