@@ -130,17 +130,19 @@ let g:ag_highlight=1
 nnoremap <leader>l :call ToggleNumber()<CR>
 
 " Symbol list toggle.
-nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <leader>B :TagbarToggle<CR>
 
 " Allow for quick hiding of the active search.
 nnoremap <leader><space> :noh<CR>
 
 " Toggle coverage gutter colouring.
-nnoremap <leader>m :Coveragepy show
+nnoremap <leader>c :Coveragepy report<CR>
+nnoremap <leader>m :Coveragepy show<CR>
 
 " Pytest execution.
-nnoremap <leader>T :Pytest project
-nnoremap <leader>M :Pytest method looponfail
+nnoremap <leader>t :Pytest file<CR>
+nnoremap <leader>T :Pytest project<CR>
+nnoremap <leader>M :Pytest method<CR>
 
 " }}}
 
@@ -160,6 +162,8 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " Language-Specific Settings {{{
 
 let g:xml_syntax_folding = 0
+set linebreak
+set breakindent
 
 augroup configgroup
 	autocmd!
@@ -168,6 +172,7 @@ augroup configgroup
 	autocmd FileType python setlocal tabstop=4
 	autocmd FileType python setlocal noexpandtab
 	autocmd FileType python setlocal shiftwidth=4
+	autocmd FileType python setlocal breakindentopt=shift:8
 augroup END
 
 " }}}
@@ -285,12 +290,12 @@ set writebackup
 
 " Python "Mode" Configuration {{{
 
-let g:pymode = 10	" Enable Pymode generally.
+let g:pymode = 1  " Enable Pymode generally.
 let g:pymode_python = 'python3'
-let g:pymode_run_key = '<leader>r'	" Execute the script by pressing ',r'
+let g:pymode_run_key = '<leader>r'  " Execute the script by pressing ',r'
 let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_lint_ignore = 'W191,W293,E251,W391'
-let g:pymode_lint_jump = 1	" Jump to the first lint error when detected. (Generally on save.)
+let g:pymode_lint_on_fly = 1
 let g:pymode_quickfix_minheight = 1
 let g:pymode_quickfix_maxheight = 5
 let g:pymode_rope_autoimport = 1
