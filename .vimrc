@@ -323,11 +323,11 @@ let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
 
 if has('gui_macvim')
-	let $PYTHONHOME="/Library/Frameworks/Python.framework/Versions/3.5"
-	set pythonthreedll=/Library/Frameworks/Python.framework/Versions/3.5/lib/libpython3.5m.dylib
+	" set pythonthreehome="/usr/local/Cellar/python3/3.6/Frameworks/Python.framework/Versions/3.6"
+	" set pythonthreedll=/usr/local/Cellar/python3/3.6.0/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib
 endif
 
-let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
+" let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
 " let $PATH="/Users/amcgregor/Projects/marrow/.venv/bin:$PATH"
 
 " }}}

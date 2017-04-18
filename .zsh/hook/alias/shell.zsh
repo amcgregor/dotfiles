@@ -11,9 +11,6 @@ if [[ $OSTYPE == darwin* ]]; then
 	
 	# These are distinctly Mac.
 	alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
-	
-	# This should only be aliased if running locally (!ssh) and when not wrapped in screen/tmux.
-	[[ $TTY == /dev/tty([sS]|)<-> ]] && alias clear="osascript -e 'tell application \"System Events\" to keystroke \"k\" using command down'"
 else
 	alias d='du --total -h --max-depth=1'
 	alias ls='ls --color=auto'
