@@ -257,7 +257,7 @@ endfunc
 " NERDTree Settings {{{
 
 let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$', '\.egg-info$', '__pycache__']
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$', '\.egg-info$', '__pycache__', 'coverage.xml']
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
@@ -327,7 +327,7 @@ if has('gui_macvim')
 	" set pythonthreedll=/usr/local/Cellar/python3/3.6.0/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib
 endif
 
-" let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
+let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
 " let $PATH="/Users/amcgregor/Projects/marrow/.venv/bin:$PATH"
 
 " }}}
