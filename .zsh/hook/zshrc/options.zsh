@@ -43,9 +43,17 @@ LOGCHECK=60
 REPORTTIME=2
 WATCHFMT='%n %a %l from %m at %t.'
 
-export EDITOR='vim'
+if [ -e "/usr/local/bin/mvim" ]; then
+	export EDITOR='mvim'
+else
+	EDITOR='vim'
+fi
+
 export VISUAL=$EDITOR
-export LESSOPEN="|lesspipe.sh %s"
+
+LESSPIPE=`which src-hilite-lesspipe.sh`
+export LESSOPEN="| ${LESSPIPE} %s"
+export LESS=' -R -X -F '
 
 
 # Enable the definition of standard color codes.

@@ -21,6 +21,13 @@ sibling() { [[ ${1:a:h} == ${2:a:h} ]]  }
 function chpwd() {
 	emulate -L zsh
 	
+	# Automatically fetch remotes and display Git status information when entering a repository.
+	if [[ -d .git ]]; then
+		clear
+		git fetch -q
+		ugst
+	fi
+	
 	# Handle transitioning out of a virtual nevironment root.
 	[[ -n $VIRTUAL_ENV ]] && [[ -n $VIRTUAL_ROOT ]] || { parent $PWD $VIRTUAL_ENV || deactivate }
 	[[ -n $VIRTUAL_ENV ]] && [[ -n $VIRTUAL_ROOT ]] && { parent $PWD $VIRTUAL_ROOT || deactivate }

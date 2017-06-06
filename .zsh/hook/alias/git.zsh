@@ -4,6 +4,7 @@
 
 alias br='git branch'
 alias ci='noglob git commit'
+alias ici='noglob git commit -c commit.gpgsign=false --no-verify'
 alias co='git checkout'
 alias gd='git diff'
 alias gds='git diff --stat'
@@ -13,7 +14,8 @@ alias grb='git rebase'
 alias grbc='git rebase --continue'
 alias grh='git reset --hard'
 alias gs='git status -s'
-alias st='git status'
+alias st="clear;ugst;echo"
+#alias st='git status'
 alias wtf='git wtf'
 
 alias add='git add'
