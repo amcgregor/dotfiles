@@ -51,9 +51,10 @@ fi
 
 export VISUAL=$EDITOR
 
+#export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
 LESSPIPE=`which src-hilite-lesspipe.sh`
-export LESSOPEN="| ${LESSPIPE} %s"
-export LESS=' -R -X -F '
+export LESSOPEN="| ${LESSPIPE} %s" LESS_ADVANCED_PREPROCESSOR=1
+export LESS=' -R -X -F -N '
 
 
 # Enable the definition of standard color codes.
