@@ -36,6 +36,7 @@ tmp/
 
 # Shell Artifacts
 .bash_*
+.zsh/.zsh_history
 .ipython/
 .ptpython/
 .ptpython_history
