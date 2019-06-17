@@ -2,86 +2,86 @@
 
 [submodule ".vim/bundle/Apprentice"]
 	path = .vim/bundle/Apprentice
-	url = https://github.com/romainl/Apprentice.git
+	url = git@github.com:romainl/Apprentice.git
 [submodule ".vim/bundle/ag"]
 	path = .vim/bundle/ag
-	url = https://github.com/rking/ag.vim.git
+	url = git@github.com:rking/ag.vim.git
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
+	url = git@github.com:ervandew/supertab.git
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
+	url = git@github.com:vim-airline/vim-airline.git
 [submodule ".vim/bundle/vim-airline-themes"]
 	path = .vim/bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
+	url = git@github.com:vim-airline/vim-airline-themes.git
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
+	url = git@github.com:airblade/vim-gitgutter.git
 
 
 # Other Modules
 
 [submodule ".vim/bundle/vim-git-flow-format"]
 	path = .vim/bundle/vim-git-flow-format
-	url = https://github.com/renyard/vim-git-flow-format.git
+	url = git@github.com:renyard/vim-git-flow-format.git
 [submodule ".vim/bundle/promptline"]
 	path = .vim/bundle/promptline
-	url = https://github.com/edkolev/promptline.vim.git
+	url = git@github.com:edkolev/promptline.vim.git
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+	url = git@github.com:tpope/vim-fugitive.git
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
+	url = git@github.com:majutsushi/tagbar.git
 [submodule ".vim/bundle/python-mode"]
 	path = .vim/bundle/python-mode
-	url = https://github.com/wilywampa/python-mode.git
+	url = git@github.com:wilywampa/python-mode.git
 [submodule ".zsh/plugin/highlight"]
 	path = .zsh/plugin/highlight
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
 [submodule ".zsh/plugin/comp"]
 	path = .zsh/plugin/comp
-	url = git://github.com/zsh-users/zsh-completions.git
+	url = git://github.com:zsh-users/zsh-completions.git
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
+	url = git@github.com:plasticboy/vim-markdown.git
 [submodule ".vim/bundle/vim-ragtag"]
 	path = .vim/bundle/vim-ragtag
-	url = https://github.com/tpope/vim-ragtag.git
+	url = git@github.com:tpope/vim-ragtag.git
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
+	url = git@github.com:jiangmiao/auto-pairs.git
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
-	url = https://github.com/easymotion/vim-easymotion.git
+	url = git@github.com:easymotion/vim-easymotion.git
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
+	url = git@github.com:tpope/vim-surround.git
 [submodule ".vim/bundle/a.vim"]
 	path = .vim/bundle/a.vim
-	url = https://github.com/vim-scripts/a.vim.git
+	url = git@github.com:vim-scripts/a.vim.git
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
+	url = git@github.com:pangloss/vim-javascript.git
 [submodule ".vim/bundle/Conque-Shell"]
 	path = .vim/bundle/Conque-Shell
-	url = https://github.com/jewes/Conque-Shell.git
+	url = git@github.com:jewes/Conque-Shell.git
 [submodule ".vim/bundle/apiblueprint.vim"]
 	path = .vim/bundle/apiblueprint.vim
-	url = https://github.com/kylef/apiblueprint.vim.git
+	url = git@github.com:kylef/apiblueprint.vim.git
 [submodule ".vim/bundle/pytest.vim"]
 	path = .vim/bundle/pytest.vim
-	url = https://github.com/alfredodeza/pytest.vim.git
+	url = ttps://github.com:alfredodeza/pytest.vim.git
 [submodule ".vim/bundle/coveragepy.vim"]
 	path = .vim/bundle/coveragepy.vim
-	url = https://github.com/alfredodeza/coveragepy.vim.git
+	url = git@github.com:alfredodeza/coveragepy.vim.git
 [submodule ".vim/bundle/vim-rhubarb"]
 	path = .vim/bundle/vim-rhubarb
-	url = https://github.com/tpope/vim-rhubarb.git
+	url = git@github.com:tpope/vim-rhubarb.git
 [submodule ".vim/bundle/vim-jdaddy"]
 	path = .vim/bundle/vim-jdaddy
 	url = git@github.com:tpope/vim-jdaddy.git
@@ -90,5 +90,5 @@
 	url = git@github.com:zivyangll/git-blame.vim.git
 [submodule ".vim/bundle/vim-eunuch"]
 	path = .vim/bundle/vim-eunuch
-	url = https://github.com/tpope/vim-eunuch.git
+	url = git@github.com:tpope/vim-eunuch.git
 	branch = master
