@@ -105,6 +105,9 @@ nnoremap ^ <nop>
 " Highlight last inserted text.
 nnoremap gV `[v`]
 
+" Ensure we always have some visible context.
+set scrolloff=6
+
 " }}}
 
 " Leader Shortcuts {{{
@@ -113,14 +116,11 @@ nnoremap G :G
 
 let mapleader=","	" Leader is comma.
 
-" Toggle gundo (better undo).
-nnoremap <leader>u :GundoToggle<CR>
-
 " Toggle the NERDTree.
 nnoremap <leader>f :NERDTreeToggle<CR>
 
-" Save the current session (re-open with: vim -S).
-nnoremap <leader>s :mksession<CR>
+" Enable git blame status line reporting.
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 " Rapidly search using ag.vim (ag command-line tool, like ack).
 nnoremap <leader>a :Ag 
