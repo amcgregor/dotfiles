@@ -105,6 +105,9 @@ nnoremap ^ <nop>
 " Highlight last inserted text.
 nnoremap gV `[v`]
 
+" Do not automatically clean indentation when moving away from the line.
+:set cpoptions+=I
+
 " Ensure we always have some visible context.
 set scrolloff=6
 
