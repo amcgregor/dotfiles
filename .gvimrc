@@ -1,5 +1,5 @@
 set guioptions="agm"
 
 set macligatures
-set guifont=Hasklig-Light:h16
 
+set guifont=HasklugNerdFontCompleteM-Light:h14
