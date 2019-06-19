@@ -266,6 +266,22 @@ let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeMouseMode=2
 
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+" f459
+" 
+
 " }}}
 
 " Syntastic {{{
