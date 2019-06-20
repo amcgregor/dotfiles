@@ -120,7 +120,8 @@ nnoremap G :G
 let mapleader=","	" Leader is comma.
 
 " Toggle the NERDTree.
-nnoremap <leader>f :NERDTreeToggle<CR>
+nnoremap <silent> <leader>f :NERDTreeToggle<CR>
+nnoremap <silent> <leader>v :NERDTreeFind<CR>
 
 " Enable git blame status line reporting.
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
@@ -265,6 +266,13 @@ let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeMouseMode=2
+let NERDTreeSortHiddenFirst=1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
