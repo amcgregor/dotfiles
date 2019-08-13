@@ -96,7 +96,7 @@ nnoremap k gk
 
 " Beginning and end of line.
 nnoremap B ^
-nnoremap E $
+nnoremap <home> $
 
 " Unbind the previously mentioned $ and ^ keys.
 nnoremap $ <nop>
