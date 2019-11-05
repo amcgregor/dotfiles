@@ -45,7 +45,7 @@
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
 [submodule ".zsh/plugin/comp"]
 	path = .zsh/plugin/comp
-	url = git://github.com:zsh-users/zsh-completions.git
+	url = git@github.com:zsh-users/zsh-completions.git
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = git@github.com:plasticboy/vim-markdown.git
