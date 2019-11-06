@@ -45,7 +45,7 @@
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
 [submodule ".zsh/plugin/comp"]
 	path = .zsh/plugin/comp
-	url = git://github.com:zsh-users/zsh-completions.git
+	url = git@github.com:zsh-users/zsh-completions.git
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = git@github.com:plasticboy/vim-markdown.git
@@ -75,7 +75,7 @@
 	url = git@github.com:kylef/apiblueprint.vim.git
 [submodule ".vim/bundle/pytest.vim"]
 	path = .vim/bundle/pytest.vim
-	url = ttps://github.com:alfredodeza/pytest.vim.git
+	url = git@github.com:alfredodeza/pytest.vim.git
 [submodule ".vim/bundle/coveragepy.vim"]
 	path = .vim/bundle/coveragepy.vim
 	url = git@github.com:alfredodeza/coveragepy.vim.git
@@ -94,9 +94,9 @@
 	branch = master
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = git@github.com:scrooloose/nerdtree.git
 	branch = master
 [submodule ".vim/bundle/nerdtree-git-plugin"]
 	path = .vim/bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
 	branch = master
