@@ -21,6 +21,8 @@ sibling() { [[ ${1:a:h} == ${2:a:h} ]]  }
 function chpwd() {
 	emulate -L zsh
 	
+	ls
+	
 	# Automatically fetch remotes and display Git status information when entering a repository.
 	if [[ -d .git ]]; then
 		clear
@@ -35,5 +37,6 @@ function chpwd() {
 	
 	# Activate any environment we transition into.
 	[[ -e .venv/bin/activate ]] && export VIRTUAL_ROOT="$PWD" && source .venv/bin/activate
-	[[ -e bin/activate ]] && source bin/activate && [[ -e src ]] && cd src
+	[[ -e bin/activate ]] && source bin/activate
+	[[ -e src ]] && cd src
 }
