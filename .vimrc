@@ -322,7 +322,10 @@ let g:pymode_python = 'python3'
 let g:pymode_run_key = '<leader>r'  " Execute the script by pressing ',r'
 let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_lint_ignore = 'W191,W293,E251,W391'
-let g:pymode_lint_on_fly = 1
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_unmodified = 0
+let g:pymode_lint_write = 0
+let g:pymode_breakpoint = 0
 let g:pymode_quickfix_minheight = 1
 let g:pymode_quickfix_maxheight = 5
 let g:pymode_rope_autoimport = 1
@@ -337,7 +340,6 @@ let g:pymode_quickfix_minheight = 0	" Minimum height is invisible.
 let g:pymode_trim_whitespaces = 0	"We have our own whitespace policy.
 let g:pymode_options = 0
 let g:pymode_options_max_line_length = 119
-let g:pymode_lint_unmodified = 1
 let g:pymode_rope_rename_bind = '<leader>R'
 let g:pymode_rope_complete_on_dot = 0
 
@@ -354,9 +356,16 @@ if has('gui_macvim')
 	" set pythonthreedll=/usr/local/Cellar/python3/3.6.0/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib
 endif
 
-let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
+" let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
 " let $PATH="/Users/amcgregor/Projects/marrow/.venv/bin:$PATH"
 
+" }}}
+
+" Kite Integration {{{
+let g:kite_auto_complete=0
+let g:kite_snippets=0
+let g:kite_tab_complete=1
+let g:kite_documentation_continual=1
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
