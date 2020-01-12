@@ -30,6 +30,9 @@ local-data: "ix.io A 192.168.2.32"
 local-zone: "hastebin.com" redirect
 local-data: "hastebin.com A 192.168.2.32"
 
+local-zone: "irccloud-cdn.com" redirect
+local-data: "irccloud-cdn.com A 192.168.2.32"
+
 
 # Maleficent Web Services
 
@@ -50,6 +53,18 @@ local-data: "convertexperiments.com A 192.168.2.32"
 
 local-zone: "compress-or-die.com" redirect
 local-data: "compress-or-die.com A 192.168.2.32"
+
+# End-to-end user analytics.
+local-zone: "woopra.com" redirect
+local-data: "woopra.com A 192.168.2.32"
+
+# Embedded "AI" chatterbots.
+local-zone: "embedly.com" redirect
+local-data: "embedly.com A 192.168.2.32"
+
+# "Subscription Commerce"
+local-zone: "recurly.com" redirect
+local-data: "recurly.com A 192.168.2.32"
 
 
 # OSX/Tarmac
