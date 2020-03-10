@@ -202,6 +202,7 @@ let g:airline#extensions#branch#format = 2
 
 let g:airline#extensions#hunks#hunk_symbols = ['+', '±', '−']
 
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
 let g:airline#extensions#whitespace#checks = [ 'indent', 'long', 'mixed-indent-file' ]
 
 let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -342,6 +343,8 @@ let g:pymode_options = 0
 let g:pymode_options_max_line_length = 119
 let g:pymode_rope_rename_bind = '<leader>R'
 let g:pymode_rope_complete_on_dot = 0
+let g:pymode_virtualenv = 1
+let g:pymode_virtualenv_path = '/Users/amcgregor/Projects/marrow/.venv'
 
 set tags=tags;$HOME/.vim/tags/
 
