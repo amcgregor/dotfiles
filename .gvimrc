@@ -2,6 +2,6 @@ set guioptions="agm"
 
 set macligatures
 
-set guifont=Hasklig-Light:h17
+set guifont=Hasklig-Light:h16
 
 set spell

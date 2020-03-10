@@ -43,12 +43,7 @@ LOGCHECK=60
 REPORTTIME=2
 WATCHFMT='%n %a %l from %m at %t.'
 
-if [ -e "/usr/local/bin/mvim" ]; then
-	export EDITOR='mvim'
-else
-	EDITOR='vim'
-fi
-
+EDITOR='vim'
 export VISUAL=$EDITOR
 
 #export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
