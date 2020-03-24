@@ -40,4 +40,4 @@
 [tag]
 	sign = true
 [gpg]
-	program = gpg2
+	program = gpg
