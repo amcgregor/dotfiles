@@ -51,6 +51,8 @@ LESSPIPE=`which src-hilite-lesspipe.sh`
 export LESSOPEN="| ${LESSPIPE} %s" LESS_ADVANCED_PREPROCESSOR=1
 export LESS=' -R -X -F -N '
 
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
+
 
 # Enable the definition of standard color codes.
 autoload -U colors
