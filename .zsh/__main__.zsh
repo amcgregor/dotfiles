@@ -22,7 +22,5 @@ cd $HOME
 
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
-# Setting PATH for Python 3.6
-# The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/sbin:${PATH}"
+PATH="~/.local/bin:/usr/local/sbin:${PATH}"
 export PATH
