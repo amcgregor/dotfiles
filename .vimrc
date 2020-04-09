@@ -301,7 +301,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_python_python_use_codec = 1
-let g:syntastic_python_python_exec = '/usr/bin/env python3'
+let g:syntastic_python_python_exec = '/usr/bin/env python3.8'
 let g:syntastic_python_checkers = ['python', 'frosted']
 
 " }}}
