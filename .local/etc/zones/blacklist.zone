@@ -66,6 +66,10 @@ local-data: "embedly.com A 192.168.2.32"
 local-zone: "recurly.com" redirect
 local-data: "recurly.com A 192.168.2.32"
 
+# To cover m.stripe.com and js.stripe.com, ref: https://mtlynch.io/stripe-recording-its-customers/
+local-zone: "stripe.com" redirect
+local-data: "stripe.com A 192.168.2.32"
+
 
 # OSX/Tarmac
 
