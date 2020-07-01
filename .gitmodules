@@ -100,3 +100,11 @@
 	path = .vim/bundle/nerdtree-git-plugin
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
 	branch = master
+[submodule ".znc/modules/playback"]
+	path = .znc/modules/playback
+	url = git@github.com:jpnurmi/znc-playback.git
+	branch = master
+[submodule ".znc/modules/palaver"]
+	path = .znc/modules/palaver
+	url = git@github.com:Palaver/znc-palaver.git
+	branch = master
