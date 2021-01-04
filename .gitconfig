@@ -15,6 +15,7 @@
 
 [alias]
 	pr = !"pr() { git fetch origin pull/$1/head:pr-$1; git checkout pr-$1;  }; pr"
+	graph = log --graph --all --format='%h %s%n        (%an, %ar)%d' --abbrev-commit
 
 [color]
 	grep = auto
@@ -41,3 +42,5 @@
 	sign = true
 [gpg]
 	program = gpg
+[pull]
+	rebase = false
