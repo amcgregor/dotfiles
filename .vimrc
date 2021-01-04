@@ -319,7 +319,7 @@ set writebackup
 " Python "Mode" Configuration {{{
 
 let g:pymode = 1  " Enable Pymode generally.
-let g:pymode_python = 'python3'
+let g:pymode_python = 'python3.8'
 let g:pymode_run_key = '<leader>r'  " Execute the script by pressing ',r'
 let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_lint_ignore = 'W191,W293,E251,W391'
@@ -359,7 +359,7 @@ if has('gui_macvim')
 	" set pythonthreedll=/usr/local/Cellar/python3/3.6.0/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib
 endif
 
-" let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
+let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
 " let $PATH="/Users/amcgregor/Projects/marrow/.venv/bin:$PATH"
 
 " }}}
