@@ -1,4 +1,25 @@
+# Image Sharing
+
+#local-zone: "imgur.com" redirect
+#local-data: "imgur.com A 192.168.2.32"
+
+local-zone: "gyazo.com" redirect
+local-data: "gyazo.com A 192.168.2.32"
+
+local-zone: "ibb.co" redirect
+local-data: "ibb.co A 192.168.2.32"
+
+
+# Highly Garbage Content
+
+local-zone: "bisend.com" redirect
+local-data: "bisend.com A 192.168.2.32"
+
+
 # Paste Services
+
+local-zone: "bpa.st" redirect
+local-data: "bpa.st A 192.168.2.32"
 
 local-zone: "dpaste.com" redirect
 local-data: "dpaste.com A 192.168.2.32"
@@ -30,9 +51,14 @@ local-data: "ix.io A 192.168.2.32"
 local-zone: "hastebin.com" redirect
 local-data: "hastebin.com A 192.168.2.32"
 
-local-zone: "irccloud-cdn.com" redirect
-local-data: "irccloud-cdn.com A 192.168.2.32"
+local-zone: "quickpaste.net" redirect
+local-data: "quickpaste.net A 192.168.2.32"
 
+local-zone: "pastery.net" redirect
+local-data: "pastery.net A 192.168.2.32"
+
+local-zone: "del.dog" redirect
+local-data: "del.dog A 192.168.2.32"
 
 # Maleficent Web Services
 
@@ -47,6 +73,12 @@ local-data: "getpushmonkey.com A 192.168.2.32"
 
 local-zone: "convertexperiments.com" redirect
 local-data: "convertexperiments.com A 192.168.2.32"
+
+# static.zdassets.com
+# shop.pe
+# addshoppers.s3.amazonaws.com
+# cdn.pbbl.co
+# aeroflow.online
 
 
 # Cookie Policies
@@ -67,8 +99,20 @@ local-zone: "recurly.com" redirect
 local-data: "recurly.com A 192.168.2.32"
 
 # To cover m.stripe.com and js.stripe.com, ref: https://mtlynch.io/stripe-recording-its-customers/
-local-zone: "stripe.com" redirect
-local-data: "stripe.com A 192.168.2.32"
+#local-zone: "stripe.com" redirect
+#local-data: "stripe.com A 192.168.2.32"
+
+
+# OSX/OceanLotus
+
+local-zone: "mihannevis.com" redirect
+local-data: "mihannevis.com A 192.168.2.32"
+
+local-zone: "mykessef.com" redirect
+local-data: "mykessef.com A 192.168.2.32"
+
+local-zone: "idtpl.org" redirect
+local-data: "idtpl.org A 192.168.2.32"
 
 
 # OSX/Tarmac
