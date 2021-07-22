@@ -1,3 +1,20 @@
+# TLDs
+
+local-zone: "asia" redirect
+local-data: "asia A 192.168.2.32"
+
+# Suspicious Links
+
+local-zone: "amazonbusiness.ca" redirect
+local-data: "amazonbusiness.ca A 192.168.2.32"
+
+local-zone: "kilitary.ru" redirect
+local-data: "kilitary.ru A 192.168.2.32"
+
+local-zone: "inspectoroverwhelm.com" redirect
+local-data: "inspectoroverwhelm.com A 192.168.2.32"
+
+
 # Image Sharing
 
 #local-zone: "imgur.com" redirect
