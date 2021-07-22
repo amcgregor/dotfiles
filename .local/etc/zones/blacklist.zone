@@ -18,7 +18,7 @@ local-data: "inspectoroverwhelm.com A 192.168.2.32"
 # Malicious Domain Squatting
 
 local-zone: "libera.net" redirect
-local-data: "libera.net A 192.168.2.32
+local-data: "libera.net A 192.168.2.32"
 
 
 # Image Sharing
