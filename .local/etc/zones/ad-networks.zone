@@ -4748,6 +4748,9 @@ local-data: "f5biz.com A 192.168.2.32"
 local-zone: "facebook.com" redirect
 local-data: "facebook.com A 192.168.2.32"
 
+local-zone: "facebook.net" redirect
+local-data: "facebook.net A 192.168.2.32"
+
 local-zone: "factorymedia.com" redirect
 local-data: "factorymedia.com A 192.168.2.32"
 
@@ -5296,6 +5299,18 @@ local-data: "googleadservices.com A 192.168.2.32"
 
 local-zone: "googlepages.com" redirect
 local-data: "googlepages.com A 192.168.2.32"
+
+local-zone: "google-analytics.com" redirect
+local-data: "google-analytics.com A 192.168.2.32"
+
+local-zone: "googletagmanager.com" redirect
+local-data: "googletagmanager.com A 192.168.2.32"
+
+local-zone: "googlesyndication.com" redirect
+local-data: "googlesyndication.com A 192.168.2.32"
+
+local-zone: "googletagservices.com" redirect
+local-data: "googletagservices.com A 192.168.2.32"
 
 local-zone: "gorgonkil.com" redirect
 local-data: "gorgonkil.com A 192.168.2.32"

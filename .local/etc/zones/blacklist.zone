@@ -38,6 +38,14 @@ local-data: "ibb.co A 192.168.2.32"
 local-zone: "bisend.com" redirect
 local-data: "bisend.com A 192.168.2.32"
 
+# Garbage Bootstrap Wordpress (and component) Themes / Templates
+# https://colorlib.com/wp/template/login-form-v6/#portfolio-single-related can fuck off.
+local-zone: "colorlib.com" redirect
+local-data: "colorlib.com A 192.168.2.32"
+
+local-zone: "w3schools.com" redirect
+local-data: "w3schools.com A 192.168.2.32"
+
 
 # Paste Services
 
