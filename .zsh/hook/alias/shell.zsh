@@ -52,3 +52,5 @@ alias cd/='cd /'
 # Process management.
 alias p='ps ax'
 
+# Look for files "contaminated" by resource forks.
+alias lsres="find . -type f -exec ls \-l {}/rsrc \; 2> /dev/null | awk ' $5 != \"0\" { print $0  }'"
