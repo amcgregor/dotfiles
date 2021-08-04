@@ -108,3 +108,7 @@
 	path = .znc/modules/palaver
 	url = git@github.com:Palaver/znc-palaver.git
 	branch = master
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+	branch = master
