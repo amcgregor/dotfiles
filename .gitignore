@@ -8,6 +8,7 @@
 
 # Mac OS X Home Folder Elements
 Applications/
+Applications\ (Parallels)/
 Desktop/
 Documents/
 Downloads/
@@ -22,6 +23,7 @@ Public/
 Sites/
 Transfer/
 VirtualBox\ VMs/
+Virtual\ Machines/
 
 # Linux Home Folder Elements
 bin/
@@ -37,9 +39,12 @@ tmp/
 # Shell Artifacts
 .bash_*
 .zsh/.zsh_history
+.zsh_history
+.zsh_sessions/
 .ipython/
 .ptpython/
 .ptpython_history
+.no-byobu
 
 # UNIX-y Artifacts
 .cache/
@@ -58,6 +63,7 @@ tmp/
 .nano/
 .nanorc
 .viminfo
+.NERDTreeBookmarks
 
 # Sensitive
 .dropbox/
@@ -73,6 +79,7 @@ tmp/
 .ssh/
 .subversion/
 .nano_history
+.3T/
 
 # Gaaaaaaames!
 .ftb/
