@@ -10,6 +10,8 @@ let g:alice_width = 120	" Marrow:OSC standardizes on 120 columns.
 let g:alice_tabs = 1	" Save the planet; use tabs. Set to zero to use heathen spaces.
 let g:alice_tabsize = 4	" Default tab size.
 
+let g:pyfold_parens = 1	" Permit folding of parenthesis.
+
 " }}}
 "
 " Below here there be dragons.
