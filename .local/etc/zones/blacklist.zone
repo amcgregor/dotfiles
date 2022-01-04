@@ -3,6 +3,19 @@
 local-zone: "asia" redirect
 local-data: "asia A 192.168.2.32"
 
+
+# Spam
+
+local-zone: "mailsrvrapp.com" redirect
+local-data: "mailsrvrapp.com A 192.168.2.32"
+
+
+# Generic Hosting
+
+local-zone: "godaddysites.com" redirect
+local-data: "godaddysites.com A 192.168.2.32"
+
+
 # Suspicious Links
 
 local-zone: "amazonbusiness.ca" redirect
@@ -34,6 +47,12 @@ local-data: "ibb.co A 192.168.2.32"
 
 
 # Highly Garbage Content
+
+local-zone: "sonsoflibertymedia.com" redirect
+local-data: "sonsoflibertymedia.com A 192.168.2.32"
+
+local-zone: "dailytelegraph.co.nz" redirect
+local-data: "dailytelegraph.co.nz A 192.168.2.32"
 
 local-zone: "bisend.com" redirect
 local-data: "bisend.com A 192.168.2.32"
