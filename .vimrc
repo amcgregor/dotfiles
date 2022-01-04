@@ -257,6 +257,9 @@ function! ToggleNumber()
 	endif
 endfunc
 
+" Reformat JSON using Python's built-in reformatting tool.
+command FormatJSON %!python3 -m json.tool
+
 " }}}
 
 " NERDTree Settings {{{
