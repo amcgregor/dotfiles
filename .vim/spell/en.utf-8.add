@@ -233,3 +233,7 @@ xls
 tsv
 csv
 vnd
+Upsert
+Superglobals
+python3
+isolatable
