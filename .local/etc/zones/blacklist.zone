@@ -65,6 +65,9 @@ local-data: "colorlib.com A 192.168.2.32"
 local-zone: "w3schools.com" redirect
 local-data: "w3schools.com A 192.168.2.32"
 
+local-zone: "betanews.com" redirect
+local-data: "betanews.com A 192.168.2.32"
+
 
 # Paste Services
 

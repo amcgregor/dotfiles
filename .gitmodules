@@ -112,3 +112,6 @@
 	path = .vim/bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
 	branch = master
+[submodule ".vim/bundle/vim-pyfold"]
+	path = .vim/bundle/vim-pyfold
+	url = git@github.com:ryankuczka/vim-pyfold.git
