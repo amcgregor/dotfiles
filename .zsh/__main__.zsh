@@ -10,15 +10,14 @@ for script in $ZDOTDIR/hook/$role/*; do
 done
 
 for script in $ZDOTDIR/plugin/*/*.$role; do
-	cd "$(dirname "$script")"
+	pushd "$(dirname "$script")"
 	# echo "> CB $script"
 	# echo "> PWD $(pwd)"
 	source "$script"
+	popd
 done
 
 unset role script
-
-cd $HOME
 
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
