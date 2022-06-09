@@ -11,7 +11,7 @@ setopt complete_in_word # Completion matches text to the left of the cursor when
 setopt glob_complete
 
 autoload -U compinit
-compinit
+compinit -i
 
 # Configure our preferred completion rules.
 

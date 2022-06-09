@@ -1,6 +1,6 @@
 mkdir "$@"
 cd "$@"
-python3.8 -m venv .venv
+python3.9 -m venv .venv
 
 awk '/unset VIRTUAL_ENV/ { print; print "unset VIRTUAL_ROOT"; next }1' .venv/bin/activate > activate
 awk "/VIRTUAL_ENV=/ { print; print \"VIRTUAL_ROOT=$(pwd)\"; print \"export VIRTUAL_ROOT\"; next }1" activate > .venv/bin/activate
