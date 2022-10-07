@@ -27,11 +27,17 @@ local-data: "kilitary.ru A 192.168.2.32"
 local-zone: "inspectoroverwhelm.com" redirect
 local-data: "inspectoroverwhelm.com A 192.168.2.32"
 
+local-zone: "rebrand.ly" redirect
+local-data: "rebrand.ly A 192.168.2.32"
+
 
 # Malicious Domain Squatting
 
 local-zone: "libera.net" redirect
 local-data: "libera.net A 192.168.2.32"
+
+local-zone: "torrentsmd.com" redirect
+local-data: "torrentsmd.com A 192.168.2.98"
 
 
 # Image Sharing
@@ -113,6 +119,12 @@ local-data: "pastery.net A 192.168.2.32"
 local-zone: "del.dog" redirect
 local-data: "del.dog A 192.168.2.32"
 
+local-zone: "0x0.st" redirect
+local-data: "0x0.st A 192.168.2.32"
+
+local-zone: "publishwith.me" redirect
+local-data: "publishwith.me A 192.168.2.32"
+
 # Maleficent Web Services
 
 local-zone: "livechatinc.com" redirect
@@ -154,6 +166,29 @@ local-data: "recurly.com A 192.168.2.32"
 # To cover m.stripe.com and js.stripe.com, ref: https://mtlynch.io/stripe-recording-its-customers/
 #local-zone: "stripe.com" redirect
 #local-data: "stripe.com A 192.168.2.32"
+
+
+# Cryptocurrency / Blockchain / Web3
+
+local-zone: "bitpay.com" redirect
+local-data: "bitpay.com A 192.168.2.32"  # Wildcard SSL forging black-hole.
+
+local-zone: "absolutelabs.io" redirect
+local-data: "absolutelabs.io A 192.168.2.32"
+
+local-zone: "vucoworld.com" redirect
+local-data: "vucoworld.com A 192.168.2.32"
+
+local-zone: "opensea.io" redirect
+local-data: "opensea.io A 192.168.2.32"
+
+# Cryptocurrency with Russian Ties
+
+local-zone: "binance.com" redirect
+local-data: "binance.com A 192.168.2.32"
+
+local-zone: "binance.us" redirect
+local-data: "binance.us A 192.168.2.32"
 
 
 # OSX/OceanLotus
@@ -688,3 +723,13 @@ local-data: "whywarbler.com A 192.168.2.32"
 
 local-zone: "wisercomputers.com" redirect
 local-data: "wisercomputers.com A 192.168.2.32"
+
+
+# Cloud Drive Providers
+
+local-zone: "pcloud.com" redirect
+local-data: "pcloud.com A 192.168.2.32"
+
+local-zone: "yandex.com" redirect
+local-data: "yandex.com A 192.168.2.32"
+
