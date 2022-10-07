@@ -80,6 +80,7 @@ tmp/
 .subversion/
 .nano_history
 .3T/
+.docker/
 
 # Gaaaaaaames!
 .ftb/
