@@ -29,6 +29,12 @@
 	browser = open
 	autocorrect = 5
 
+[diff "utf16"]
+	textconv = "iconv -f utf-16 -t utf-8"
+
+[diff "plist"]
+	textconv = plutil -convert xml1 -o -
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
