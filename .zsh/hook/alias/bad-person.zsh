@@ -11,6 +11,8 @@ function yd() {
 	yt-dlp -o '%(upload_date)s--%(id)s--%(title)s--%(resolution)s.%(ext)s' --progress --concurrent-fragments 3 --continue --ignore-errors --restrict-filenames --no-overwrites --no-playlist --xattr-set-filesize --write-info-json --paths temp:/tmp/cast --no-call-home --no-mark-watched --format '700+140/699+140/299+140/bestvideo[ext=mp4]+bestaudio[ext=m4a]' --merge-output-format mp4 --embed-subs --embed-metadata --embed-thumbnail --sub-format best --sub-langs all "https://youtube.com/watch?v=$1"
 }
 
+alias cb='7z a -t7z -mx=9 -mfb=273 -ms -md=31 -myx=9 -mtm=- -mmt -mmtf -md=1536m -mmf=bt3 -mmc=10000 -mpb=0 -mlc=0'
+
 # alias ydl1080="youtube-dl --ignore-errors --download-archive _archive.ids --no-mark-watched --no-playlist --restrict-filenames --continue --no-overwrites --write-description --write-info-json --write-thumbnail --no-call-home --write-sub --embed-subs -o '%(playlist)s/%(upload_date)s--%(id)s--%(title)s--%(resolution)s.%(ext)s' --merge-output-format mp4 --sub-format best --add-metadata --youtube-skip-dash-manifest --format '137+140/bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
 
 # alias ydl4k="youtube-dl --ignore-errors --download-archive _archive.ids --no-mark-watched --no-playlist --restrict-filenames --continue --no-overwrites --write-description --write-info-json --write-thumbnail --no-call-home --write-sub --embed-subs -o '%(playlist)s/%(upload_date)s--%(id)s--%(title)s--%(resolution)s.%(ext)s' --merge-output-format mp4 --sub-format best --add-metadata --youtube-skip-dash-manifest --format '401+bestaudio[ext=m4a]/400+bestaudio[ext=m4a]/137+140/bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
