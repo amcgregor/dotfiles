@@ -367,11 +367,23 @@ let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
 
 " }}}
 
-" Kite Integration {{{
-let g:kite_auto_complete=0
-let g:kite_snippets=0
-let g:kite_tab_complete=1
-let g:kite_documentation_continual=1
+" Spelling and Syntax Customization {{{
+
+" Automatically enable spelling for these syntaxes.
+autocmd FileType markdown setlocal spell
+
+" Don't mark URL-like things as spelling errors
+syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell
+
+" Don't count acronyms / abbreviations as spelling errors
+" (all upper-case letters, at least three characters)
+" Also will not count acronym with 's' at the end a spelling error
+" Also will not count numbers that are part of this
+" Recognizes the following as correct:
+syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
+
+
+
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
