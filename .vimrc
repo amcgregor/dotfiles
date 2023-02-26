@@ -371,6 +371,7 @@ let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
 
 " Automatically enable spelling for these syntaxes.
 autocmd FileType markdown setlocal spell
+autocmd FileType python setlocal spell
 
 " Don't mark URL-like things as spelling errors
 syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell
@@ -382,7 +383,9 @@ syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell
 " Recognizes the following as correct:
 syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
 
-
+" Spell check within Python strings and comments.
+autocmd FileType python syntax cluster vimStringGroup add=@Spell
+autocmd FileType python syntax cluster vimComment add=@Spell
 
 " }}}
 
