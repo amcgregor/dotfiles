@@ -34,7 +34,7 @@ shellopts[screen_names]=1 # Dynamically change window names in GNU screen
 shellopts[titlebar]=1     # Whether the titlebar can be dynamically changed
 shellopts[utf8]=1         # Set up a few programs for UTF-8 mode
 
-cdpath=(. $HOME/Projects $HOME/app $HOME/apps /Volumes)
+cdpath=(. $HOME/Projects $HOME/app $HOME/apps /Volumes /Volumes/CEGID)
 watch=(notme)
 
 typeset -U cdpath watch
