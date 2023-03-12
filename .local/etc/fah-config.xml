@@ -1,0 +1,15 @@
+<config>
+  <!-- Network -->
+  <proxy v=':8080'/>
+
+  <!-- Slot Control -->
+  <power v='FULL'/>
+
+  <!-- User Information -->
+  <passkey v='c9bf7d2d21230da9c9bf7d2d21230da9'/>
+  <team v='251381'/>
+  <user v='AMcGregor'/>
+
+  <!-- Folding Slots -->
+  <slot id='0' type='CPU'/>
+</config>
