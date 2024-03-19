@@ -177,6 +177,7 @@ augroup configgroup
 	autocmd FileType python setlocal commentstring=#\ %s
 	autocmd FileType python setlocal tabstop=4
 	autocmd FileType python setlocal noexpandtab
+	autocmd FileType python setlocal nowrap
 	autocmd FileType python setlocal shiftwidth=4
 	autocmd FileType python setlocal breakindentopt=shift:8
 augroup END
@@ -304,7 +305,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_python_python_use_codec = 1
-let g:syntastic_python_python_exec = '/usr/bin/env python3.8'
+let g:syntastic_python_python_exec = '/usr/bin/env python3.9'
 let g:syntastic_python_checkers = ['python', 'frosted']
 
 " }}}
@@ -322,7 +323,7 @@ set writebackup
 " Python "Mode" Configuration {{{
 
 let g:pymode = 1  " Enable Pymode generally.
-let g:pymode_python = 'python3.8'
+let g:pymode_python = 'python3.9'
 let g:pymode_run_key = '<leader>r'  " Execute the script by pressing ',r'
 let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_lint_ignore = 'W191,W293,E251,W391'
@@ -347,7 +348,7 @@ let g:pymode_options_max_line_length = 119
 let g:pymode_rope_rename_bind = '<leader>R'
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_virtualenv = 1
-let g:pymode_virtualenv_path = '/Users/amcgregor/Projects/marrow/.venv'
+let g:pymode_virtualenv_path = '/Volumes/Containers/rita'
 
 set tags=tags;$HOME/.vim/tags/
 
@@ -357,12 +358,12 @@ let Tlist_Close_On_Select = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
 
-if has('gui_macvim')
+" if has('gui_macvim')
 	" set pythonthreehome="/usr/local/Cellar/python3/3.6/Frameworks/Python.framework/Versions/3.6"
 	" set pythonthreedll=/usr/local/Cellar/python3/3.6.0/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib
-endif
+" endif
 
-let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
+" let $VIRTUAL_ENV="/Users/amcgregor/Projects/marrow/.venv"
 " let $PATH="/Users/amcgregor/Projects/marrow/.venv/bin:$PATH"
 
 " }}}
